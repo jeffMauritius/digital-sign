@@ -27,7 +27,7 @@ export default function DashboardPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      digital sign
+      <PlaceholderContent />
     </ContentLayout>
   );
 }
