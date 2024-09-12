@@ -54,43 +54,36 @@ export function getMenuList(pathname: string): Group[] {
               href: "/needSignature",
               label: "Need signature",
               active: pathname.includes("/needSignature"),
-             
             },
             {
               href: "/inProgress",
               label: "In progress",
               active: pathname.includes("/inProgress"),
-             
             },
             {
               href: "/complete",
               label: "Complete",
               active: pathname.includes("/complete"),
-             
             },
             {
               href: "/draft",
               label: "Draft",
               active: pathname.includes("/draft"),
-             
             },
             {
               href: "/signatureRefused",
               label: "Signature refused",
               active: pathname.includes("/signatureRefused"),
-              
             },
             {
               href: "/exped",
               label: "Exped",
               active: pathname.includes("/exped"),
-              
             },
             {
               href: "/contacts",
               label: "Contacts",
               active: pathname.includes("/contacts"),
-              
             },
           ],
         },

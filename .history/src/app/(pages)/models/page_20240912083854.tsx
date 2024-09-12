@@ -7,11 +7,10 @@ import {
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
-  BreadcrumbSeparator
+  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
 export default function ModelsPage() {
-  
   return (
     <ContentLayout title="All Posts">
       <Breadcrumb>

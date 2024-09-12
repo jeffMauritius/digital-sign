@@ -6,8 +6,6 @@ export function Footer() {
       <div className="mx-4 md:mx-8 flex h-14 items-center">
         <p className="text-xs md:text-sm leading-loose text-muted-foreground text-left">
           Digital-sign@2024{" "}
-          
-         
           <Link
             href="https://github.com/salimi-my/shadcn-ui-sidebar"
             target="_blank"
