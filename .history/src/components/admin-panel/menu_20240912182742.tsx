@@ -79,7 +79,6 @@ export function Menu({ isOpen }: MenuProps) {
                                   )}
                                 >
                                   {t(label)}
-                                  
                                 </p>
                               </Link>
                             </Button>

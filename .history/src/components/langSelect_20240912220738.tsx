@@ -38,10 +38,10 @@ export default function LangSelect({ defaultValue, items, label }: Props) {
 
   return (
     <DropdownMenu>
-      <TooltipProvider disableHoverableContent>
-        <Tooltip delayDuration={100}>
-          <TooltipTrigger asChild>
-            <DropdownMenuTrigger asChild>
+      <DropdownMenuTrigger asChild>
+        <TooltipProvider disableHoverableContent>
+          <Tooltip delayDuration={100}>
+            <TooltipTrigger asChild>
               <Button
                 variant="outline"
                 className="relative h-8 w-8 rounded-full mr-2"
@@ -50,12 +50,11 @@ export default function LangSelect({ defaultValue, items, label }: Props) {
                 <Languages className="h-5 w-5" />
                 <span className="sr-only">Toggle language</span>
               </Button>
-            </DropdownMenuTrigger>
-          </TooltipTrigger>
-          <TooltipContent side="bottom">Toggle language</TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-
+            </TooltipTrigger>
+            <TooltipContent side="bottom">Toggle language</TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </DropdownMenuTrigger>
       <DropdownMenuContent align="center">
         {items.map((item) => (
           <DropdownMenuItem

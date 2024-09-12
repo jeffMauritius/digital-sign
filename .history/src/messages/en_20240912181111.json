@@ -11,7 +11,7 @@
     "models": {
       "create": "Créer un model",
       "manage": "Gérer les modéles",
-      "modelsLabel": "Modéles",
+      "modelsLabel": "Modéles"
     },
     "drive": "Lecteur Digisign",
     "report": {

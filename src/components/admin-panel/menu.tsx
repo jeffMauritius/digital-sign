@@ -79,7 +79,6 @@ export function Menu({ isOpen }: MenuProps) {
                                   )}
                                 >
                                   {t(label)}
-                                  
                                 </p>
                               </Link>
                             </Button>
@@ -106,7 +105,6 @@ export function Menu({ isOpen }: MenuProps) {
               )}
             </li>
           ))}
-         
         </ul>
       </nav>
     </ScrollArea>

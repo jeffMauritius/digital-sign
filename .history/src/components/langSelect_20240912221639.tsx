@@ -52,7 +52,7 @@ export default function LangSelect({ defaultValue, items, label }: Props) {
               </Button>
             </DropdownMenuTrigger>
           </TooltipTrigger>
-          <TooltipContent side="bottom">Toggle language</TooltipContent>
+          <TooltipContent side="bottom">Profile</TooltipContent>
         </Tooltip>
       </TooltipProvider>
 

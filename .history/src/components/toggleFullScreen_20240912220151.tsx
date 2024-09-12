@@ -40,7 +40,7 @@ export default function ToggleFullScreen() {
             )}
           </Button>
         </TooltipTrigger>
-        <TooltipContent side="bottom">Full screen</TooltipContent>
+        <TooltipContent side="bottom">Switch Theme</TooltipContent>
       </Tooltip>
     </TooltipProvider>
   );

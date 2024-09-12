@@ -1,4 +1,13 @@
-import { Tag, Settings, SquarePen, LayoutGrid, LucideIcon, FilePen, LayoutDashboard, Send } from "lucide-react";
+import {
+  Tag,
+  Settings,
+  SquarePen,
+  LayoutGrid,
+  LucideIcon,
+  FilePen,
+  LayoutDashboard,
+  Send,
+} from "lucide-react";
 
 type Submenu = {
   href: string;

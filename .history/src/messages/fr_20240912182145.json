@@ -8,7 +8,7 @@
     "dashboard": "Tableau de bord",
     "sign": "Signez",
     "sendRequest": "Demande de signature",
-    "models":{
+    "models": {
       "label": "Modéles",
       "create": "Créer un modele",
       "manage": "Gérer les modéles"

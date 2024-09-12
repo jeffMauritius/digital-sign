@@ -12,11 +12,11 @@ import { Languages } from "lucide-react";
 import { setUserLocale } from "@/services/locale";
 import { Locale } from "@/i18n/config";
 import {
-  Tooltip,
-  TooltipContent,
   TooltipProvider,
+  Tooltip,
   TooltipTrigger,
-} from "./ui/tooltip";
+  TooltipContent,
+} from "@radix-ui/react-tooltip";
 
 type Props = {
   defaultValue: string;
@@ -37,10 +37,10 @@ export default function LangSelect({ defaultValue, items, label }: Props) {
   }
 
   return (
-    <DropdownMenu>
-      <TooltipProvider disableHoverableContent>
-        <Tooltip delayDuration={100}>
-          <TooltipTrigger asChild>
+    <TooltipProvider disableHoverableContent>
+      <Tooltip delayDuration={100}>
+        <TooltipTrigger asChild>
+          <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
                 variant="outline"
@@ -51,21 +51,20 @@ export default function LangSelect({ defaultValue, items, label }: Props) {
                 <span className="sr-only">Toggle language</span>
               </Button>
             </DropdownMenuTrigger>
-          </TooltipTrigger>
-          <TooltipContent side="bottom">Toggle language</TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-
-      <DropdownMenuContent align="center">
-        {items.map((item) => (
-          <DropdownMenuItem
-            key={item.value}
-            onClick={() => onChange(item.value)}
-          >
-            {item.label}
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+            <DropdownMenuContent align="center">
+              {items.map((item) => (
+                <DropdownMenuItem
+                  key={item.value}
+                  onClick={() => onChange(item.value)}
+                >
+                  {item.label}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </TooltipTrigger>
+        <TooltipContent side="bottom">Toggle language</TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 }

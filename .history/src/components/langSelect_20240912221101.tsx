@@ -11,12 +11,7 @@ import { Button } from "./ui/button";
 import { Languages } from "lucide-react";
 import { setUserLocale } from "@/services/locale";
 import { Locale } from "@/i18n/config";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "./ui/tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 
 type Props = {
   defaultValue: string;
@@ -37,25 +32,21 @@ export default function LangSelect({ defaultValue, items, label }: Props) {
   }
 
   return (
-    <DropdownMenu>
-      <TooltipProvider disableHoverableContent>
-        <Tooltip delayDuration={100}>
-          <TooltipTrigger asChild>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="outline"
-                className="relative h-8 w-8 rounded-full mr-2"
-                size="icon"
-              >
-                <Languages className="h-5 w-5" />
-                <span className="sr-only">Toggle language</span>
-              </Button>
-            </DropdownMenuTrigger>
-          </TooltipTrigger>
-          <TooltipContent side="bottom">Toggle language</TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-
+    
+        <DropdownMenu>
+          <TooltipProvider disableHoverableContent>
+      <Tooltip delayDuration={100}>
+        <TooltipTrigger asChild></TooltipTrigger>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" className="relative h-8 w-8 rounded-full mr-2" size="icon" >
+          <Languages className="h-5 w-5" />
+          <span className="sr-only">Toggle language</span>
+        </Button>
+      </DropdownMenuTrigger>
+      </TooltipTrigger>
+        <TooltipContent side="bottom">Toggle language</TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
       <DropdownMenuContent align="center">
         {items.map((item) => (
           <DropdownMenuItem
@@ -67,5 +58,7 @@ export default function LangSelect({ defaultValue, items, label }: Props) {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
+        
+    
   );
 }
