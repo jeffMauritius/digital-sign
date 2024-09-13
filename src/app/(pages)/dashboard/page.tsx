@@ -1,6 +1,9 @@
-import Link from "next/link";
+"use client"
 
-import { ContentLayout } from "@/components/admin-panel/content-layout";
+import Link from "next/link"
+import { signIn, useSession } from "next-auth/react"
+
+import { ContentLayout } from "@/components/admin-panel/content-layout"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,9 +11,12 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/components/ui/breadcrumb"
+import { Button } from "@/components/ui/button"
 
 export default function DashboardPage() {
+  const { data: session } = useSession()
+
   return (
     <ContentLayout title="Dashboard">
       <Breadcrumb>
@@ -26,7 +32,21 @@ export default function DashboardPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      Bureau Page
+      {session ? (
+        <p>Welcome on the Dashboard page</p>
+      ) : (
+        <>
+          <p>You are not logged in</p>
+          <div className="flex gap-5 pt-3">
+            <Button onClick={() => signIn("google")}>
+              Sign in with google
+            </Button>
+            <Button onClick={() => signIn("github")}>
+              Sign in with github
+            </Button>
+          </div>
+        </>
+      )}
     </ContentLayout>
-  );
+  )
 }

@@ -1,39 +1,39 @@
-"use client";
+"use client"
 
-import React, { useTransition } from "react";
+import React, { useTransition } from "react"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import { Button } from "./ui/button";
-import { Languages } from "lucide-react";
-import { setUserLocale } from "@/services/locale";
-import { Locale } from "@/i18n/config";
+} from "./ui/dropdown-menu"
+import { Button } from "./ui/button"
+import { Languages } from "lucide-react"
+import { setUserLocale } from "@/services/locale"
+import { Locale } from "@/i18n/config"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip";
+} from "./ui/tooltip"
 
 type Props = {
-  defaultValue: string;
-  items: Array<{ value: string; label: string }>;
-  label: string;
-};
+  defaultValue: string
+  items: Array<{ value: string; label: string }>
+  label: string
+}
 
 export default function LangSelect({ defaultValue, items, label }: Props) {
-  const [isPending, startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition()
 
-  console.log("items", items);
+  console.log("items", items)
 
   function onChange(value: string) {
-    const locale = value as Locale;
+    const locale = value as Locale
     startTransition(() => {
-      setUserLocale(locale);
-    });
+      setUserLocale(locale)
+    })
   }
 
   return (
@@ -57,7 +57,7 @@ export default function LangSelect({ defaultValue, items, label }: Props) {
       </TooltipProvider>
 
       <DropdownMenuContent align="center">
-        {items.map((item) => (
+        {items.map(item => (
           <DropdownMenuItem
             key={item.value}
             onClick={() => onChange(item.value)}
@@ -67,5 +67,5 @@ export default function LangSelect({ defaultValue, items, label }: Props) {
         ))}
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

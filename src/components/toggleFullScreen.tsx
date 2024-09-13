@@ -1,27 +1,27 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
-import { Button } from "./ui/button";
-import { EnterFullScreenIcon, ExitFullScreenIcon } from "@radix-ui/react-icons";
+import React, { useState } from "react"
+import { Button } from "./ui/button"
+import { EnterFullScreenIcon, ExitFullScreenIcon } from "@radix-ui/react-icons"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip";
+} from "./ui/tooltip"
 
 export default function ToggleFullScreen() {
-  const [toggleIcon, setToggleIcon] = useState(true);
+  const [toggleIcon, setToggleIcon] = useState(true)
 
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
-      setToggleIcon(false);
-      document.documentElement.requestFullscreen();
+      setToggleIcon(false)
+      document.documentElement.requestFullscreen()
     } else if (document.exitFullscreen) {
-      setToggleIcon(true);
-      document.exitFullscreen();
+      setToggleIcon(true)
+      document.exitFullscreen()
     }
-  };
+  }
 
   return (
     <TooltipProvider disableHoverableContent>
@@ -43,5 +43,5 @@ export default function ToggleFullScreen() {
         <TooltipContent side="bottom">Full screen</TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  );
+  )
 }

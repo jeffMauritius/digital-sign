@@ -1,30 +1,30 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { Ellipsis, LogOut } from "lucide-react";
-import { usePathname } from "next/navigation";
+import Link from "next/link"
+import { Ellipsis, LogOut } from "lucide-react"
+import { usePathname } from "next/navigation"
 
-import { cn } from "@/lib/utils";
-import { getMenuList } from "@/lib/menu-list";
-import { Button } from "@/components/ui/button";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { CollapseMenuButton } from "@/components/admin-panel/collapse-menu-button";
+import { cn } from "@/lib/utils"
+import { getMenuList } from "@/lib/menu-list"
+import { Button } from "@/components/ui/button"
+import { ScrollArea } from "@/components/ui/scroll-area"
+import { CollapseMenuButton } from "@/components/admin-panel/collapse-menu-button"
 import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
   TooltipProvider,
-} from "@/components/ui/tooltip";
-import { useTranslations } from "next-intl";
+} from "@/components/ui/tooltip"
+import { useTranslations } from "next-intl"
 
 interface MenuProps {
-  isOpen: boolean | undefined;
+  isOpen: boolean | undefined
 }
 
 export function Menu({ isOpen }: MenuProps) {
-  const pathname = usePathname();
-  const menuList = getMenuList(pathname);
-  const t = useTranslations();
+  const pathname = usePathname()
+  const menuList = getMenuList(pathname)
+  const t = useTranslations()
 
   return (
     <ScrollArea className="[&>div>div[style]]:!block">
@@ -108,5 +108,5 @@ export function Menu({ isOpen }: MenuProps) {
         </ul>
       </nav>
     </ScrollArea>
-  );
+  )
 }

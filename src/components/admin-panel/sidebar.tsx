@@ -1,18 +1,18 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import { cn } from "@/lib/utils";
-import Image from "next/image";
+import { cn } from "@/lib/utils"
+import Image from "next/image"
 
-import { useStore } from "@/hooks/use-store";
-import { Button } from "@/components/ui/button";
-import { Menu } from "@/components/admin-panel/menu";
-import { useSidebarToggle } from "@/hooks/use-sidebar-toggle";
-import { SidebarToggle } from "@/components/admin-panel/sidebar-toggle";
+import { useStore } from "@/hooks/use-store"
+import { Button } from "@/components/ui/button"
+import { Menu } from "@/components/admin-panel/menu"
+import { useSidebarToggle } from "@/hooks/use-sidebar-toggle"
+import { SidebarToggle } from "@/components/admin-panel/sidebar-toggle"
 
 export function Sidebar() {
-  const sidebar = useStore(useSidebarToggle, (state) => state);
+  const sidebar = useStore(useSidebarToggle, state => state)
 
-  if (!sidebar) return null;
+  if (!sidebar) return null
 
   return (
     <aside
@@ -47,5 +47,5 @@ export function Sidebar() {
         <Menu isOpen={sidebar?.isOpen} />
       </div>
     </aside>
-  );
+  )
 }

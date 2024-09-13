@@ -1,19 +1,19 @@
-"use client";
+"use client"
 
-import * as React from "react";
-import { useTheme } from "next-themes";
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import * as React from "react"
+import { useTheme } from "next-themes"
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons"
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
   TooltipProvider,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/tooltip"
 
 export function ModeToggle() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, theme } = useTheme()
 
   return (
     <TooltipProvider disableHoverableContent>
@@ -33,5 +33,5 @@ export function ModeToggle() {
         <TooltipContent side="bottom">Switch Theme</TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  );
+  )
 }
