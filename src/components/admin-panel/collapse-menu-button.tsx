@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { ChevronDown, Dot, LucideIcon, Minus } from "lucide-react"
+import { ChevronDown, LucideIcon, Minus } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils"
