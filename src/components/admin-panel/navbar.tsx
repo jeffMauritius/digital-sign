@@ -2,7 +2,6 @@ import { ModeToggle } from "@/components/mode-toggle"
 import { UserNav } from "@/components/admin-panel/user-nav"
 import { SheetMenu } from "@/components/admin-panel/sheet-menu"
 import ToggleFullScreen from "../toggleFullScreen"
-import LangSelect from "../langSelect"
 import LocaleSwitcher from "../langSwitcher"
 
 interface NavbarProps {
