@@ -4,6 +4,23 @@
     "en": "Anglais",
     "label": "Langage"
   },
+  "dashboard": {
+    "title": "Tableau de bord"
+  },
+  "sign": {
+    "title": "Signez"
+  },
+  "breadcrumb": {
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "sign": "Signez",
+    "sendRequest": "Demande de signature",
+    "models": {
+      "label": "Modéles",
+      "create": "Créer un modéle",
+      "manage": "Gérer les modéles"
+    }
+  },
   "sidebar": {
     "dashboard": "Tableau de bord",
     "sign": "Signez",
@@ -12,6 +29,22 @@
       "label": "Modéles",
       "create": "Créer un modéle",
       "manage": "Gérer les modéles"
+    },
+    "drive": "Lecteur Digisign",
+    "reports": {
+      "label": "Rapports",
+      "needSignature": "Besoin de signature",
+      "inProgress": "En cours",
+      "complete": "Complétés",
+      "draft": "Brouillons",
+      "signatureRefused": "Signature refusé",
+      "exped": "Expiré",
+      "contacts": "Contacts"
+    },
+    "settings": {
+      "label": "Paramétres",
+      "mySignature": "Ma signature",
+      "users": "Utilisateurs"
     },
     "drive": "Lecteur Digisign",
     "reports": {

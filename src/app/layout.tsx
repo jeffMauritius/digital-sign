@@ -31,11 +31,11 @@ export default async function RootLayout({
   const messages = await getMessages()
   console.log(locale, messages)
   return (
-    <SessionWrapper>
-      <html lang={locale}>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+    <html lang={locale} suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <SessionWrapper>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -46,8 +46,8 @@ export default async function RootLayout({
               {children}
             </NextIntlClientProvider>
           </ThemeProvider>
-        </body>
-      </html>
-    </SessionWrapper>
+        </SessionWrapper>
+      </body>
+    </html>
   )
 }

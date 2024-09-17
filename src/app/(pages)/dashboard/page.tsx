@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { signIn, signOut, useSession } from "next-auth/react"
+import { useSession } from "next-auth/react"
 
 import { ContentLayout } from "@/components/admin-panel/content-layout"
 import {
@@ -12,45 +12,48 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { Button } from "@/components/ui/button"
 import AuthenticationWrapper from "@/components/authentication/authenticationWrapper"
-import SignInForm from "@/components/authentication/signinForm"
+import AuthForm from "@/components/authentication/authForm"
+import { useTranslations } from "next-intl"
+import TabContainer from "@/components/dashboard/tabContainer"
+import data from "@/app/data/dashboard/index.json"
 
 export default function DashboardPage() {
   const { data: session } = useSession()
+  const t = useTranslations()
 
-  console.log("session", session)
+  console.log("data", data.tableCaption)
 
   return (
-    <ContentLayout title="Dashboard">
+    <ContentLayout title={t("dashboard.title")}>
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/">Home</Link>
+              <Link href="/dashboard">{t("breadcrumb.home")}</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Dashboard</BreadcrumbPage>
+            <BreadcrumbPage>{t("breadcrumb.dashboard")}</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      {session ? (
-        <>
-          <p>{`Welcome ${session.user?.name} you are logged with the email ${session.user?.email}`}</p>
-          <Button onClick={() => signOut()}>Sign out</Button>
-        </>
-      ) : (
+      {!session && (
         <div className="h-60 grid  gap-4 content-center">
           <div className="border p-3 rounded">
             <p className="text-sm">You are not logged in.</p>
             <div className="flex">
               <AuthenticationWrapper>
-                <SignInForm />
+                <AuthForm />
               </AuthenticationWrapper>
             </div>
           </div>
+        </div>
+      )}
+      {session && (
+        <div className="pt-5">
+          <TabContainer data={data} />
         </div>
       )}
     </ContentLayout>

@@ -16,17 +16,26 @@ const AuthenticationWrapper = ({ children }: { children: React.ReactNode }) => {
   const [open, setOpen] = React.useState(false)
   const isDesktop = useMediaQuery("(min-width: 768px)")
   const { data: session } = useSession()
+  const [switchAuth, setSwitchAuth] = React.useState(false)
   if (isDesktop) {
     return (
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <span className="inline-block align-middle  text-sm ">
             Already have an account ?
-            <Button className="p-2" variant={"link"}>
+            <Button
+              className="p-2"
+              variant={"link"}
+              onClick={() => setSwitchAuth(!switchAuth)}
+            >
               Sign in
             </Button>
-            don&apos;t have an account ?
-            <Button className="p-2" variant={"link"}>
+            or if don&apos;t have an account ?
+            <Button
+              className="p-2"
+              variant={"link"}
+              onClick={() => setSwitchAuth(!switchAuth)}
+            >
               Sign up
             </Button>
           </span>
@@ -42,7 +51,7 @@ const AuthenticationWrapper = ({ children }: { children: React.ReactNode }) => {
         <Button variant="outline">{session ? "Sign out" : "Sign in"}</Button>
       </DrawerTrigger>
       <DrawerContent>
-        <div className="px-4">{children}</div>
+        <div className="">{children}</div>
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
             <Button variant="outline">Cancel</Button>
