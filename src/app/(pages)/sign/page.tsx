@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import { ContentLayout } from "@/components/admin-panel/content-layout";
+import { ContentLayout } from "@/components/admin-panel/content-layout"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,25 +8,27 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/components/ui/breadcrumb"
+import { useTranslations } from "next-intl"
 
 export default function DashboardPage() {
+  const t = useTranslations()
   return (
-    <ContentLayout title="Dashboard">
+    <ContentLayout title={t("sign.title")}>
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/">Home</Link>
+              <Link href="/dashboard">{t("breadcrumb.home")}</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>Sign</BreadcrumbPage>
+            <BreadcrumbPage>{t("breadcrumb.sign")}</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      Signez Page
+      {t("sign.title")}
     </ContentLayout>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import { ContentLayout } from "@/components/admin-panel/content-layout";
+import { ContentLayout } from "@/components/admin-panel/content-layout"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,7 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/components/ui/breadcrumb"
 
 export default function PostsPage() {
   return (
@@ -33,5 +33,5 @@ export default function PostsPage() {
         </BreadcrumbList>
       </Breadcrumb>
     </ContentLayout>
-  );
+  )
 }

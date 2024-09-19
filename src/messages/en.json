@@ -4,6 +4,23 @@
     "en": "English",
     "label": "Language"
   },
+  "dashboard": {
+    "title": "Dashboard"
+  },
+  "sign": {
+    "title": "Signez"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "sign": "Sign",
+    "sendRequest": "Send request",
+    "models": {
+      "create": "Create model",
+      "manage": "Manage model",
+      "label": "Models"
+    }
+  },
   "sidebar": {
     "dashboard": "Dashboard",
     "sign": "Sign",

@@ -1,9 +1,9 @@
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
+import Link from "next/link"
+import Image from "next/image"
+import { ArrowRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons"
 
-import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/mode-toggle";
+import { Button } from "@/components/ui/button"
+import { ModeToggle } from "@/components/mode-toggle"
 
 export default function HomePage() {
   return (
@@ -12,7 +12,7 @@ export default function HomePage() {
         <div className="container h-20 flex items-center">
           <Link
             href="/"
-            className="flex hidden justify-start items-center hover:opacity-85 transition-opacity duration-300"
+            className="hidden justify-start items-center hover:opacity-85 transition-opacity duration-300"
           >
             <Image src={"/logo.png"} alt={"logo"} width={250} height={60} />
           </Link>
@@ -82,5 +82,5 @@ export default function HomePage() {
         </div>
       </main>
     </div>
-  );
+  )
 }

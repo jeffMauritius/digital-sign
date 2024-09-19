@@ -1,9 +1,9 @@
-import { useLocale, useTranslations } from "next-intl";
-import LangSelect from "./langSelect";
+import { useLocale, useTranslations } from "next-intl"
+import LangSelect from "./langSelect"
 
 export default function LocaleSwitcher() {
-  const t = useTranslations("langSwitcher");
-  const locale = useLocale();
+  const t = useTranslations("langSwitcher")
+  const locale = useLocale()
 
   return (
     <LangSelect
@@ -20,5 +20,5 @@ export default function LocaleSwitcher() {
       ]}
       label={t("label")}
     />
-  );
+  )
 }

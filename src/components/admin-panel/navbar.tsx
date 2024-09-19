@@ -1,12 +1,11 @@
-import { ModeToggle } from "@/components/mode-toggle";
-import { UserNav } from "@/components/admin-panel/user-nav";
-import { SheetMenu } from "@/components/admin-panel/sheet-menu";
-import ToggleFullScreen from "../toggleFullScreen";
-import LangSelect from "../langSelect";
-import LocaleSwitcher from "../langSwitcher";
+import { ModeToggle } from "@/components/mode-toggle"
+import { UserNav } from "@/components/admin-panel/user-nav"
+import { SheetMenu } from "@/components/admin-panel/sheet-menu"
+import ToggleFullScreen from "../toggleFullScreen"
+import LocaleSwitcher from "../langSwitcher"
 
 interface NavbarProps {
-  title: string;
+  title: string
 }
 
 export function Navbar({ title }: NavbarProps) {
@@ -25,5 +24,5 @@ export function Navbar({ title }: NavbarProps) {
         </div>
       </div>
     </header>
-  );
+  )
 }
