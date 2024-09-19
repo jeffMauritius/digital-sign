@@ -26,8 +26,6 @@ import { useState } from "react"
 export function UserNav() {
   const { data: session, status } = useSession()
 
-  console.log("session", session)
-
   return (
     <DropdownMenu>
       <TooltipProvider disableHoverableContent>

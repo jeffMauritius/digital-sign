@@ -28,8 +28,8 @@ const TableContainer = (data: any) => {
       </TableHeader>
 
       <TableBody>
-        {Object.values(data.signHeaderData).map((d: any) => (
-          <TableRow key={d}>
+        {Object.values(data.signHeaderData).map((d: any, index) => (
+          <TableRow key={index}>
             <TableCell className="font-medium">{d.title}</TableCell>
             <TableCell>{d.file}</TableCell>
             <TableCell>{d.owner}</TableCell>
