@@ -27,8 +27,6 @@ type Props = {
 export default function LangSelect({ defaultValue, items, label }: Props) {
   const [isPending, startTransition] = useTransition()
 
-  console.log("items", items)
-
   function onChange(value: string) {
     const locale = value as Locale
     startTransition(() => {

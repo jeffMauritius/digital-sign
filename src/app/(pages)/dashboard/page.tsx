@@ -22,7 +22,9 @@ export default function DashboardPage() {
   const { data: session } = useSession()
   const t = useTranslations()
 
-  console.log("data", data.tableCaption)
+  if (status === "loading") {
+    return <div>Loading...</div>
+  }
 
   return (
     <ContentLayout title={t("dashboard.title")}>
@@ -40,7 +42,7 @@ export default function DashboardPage() {
         </BreadcrumbList>
       </Breadcrumb>
       {!session && (
-        <div className="h-60 grid  gap-4 content-center">
+        <div className="h-60 grid gap-4 content-center" aria-live="polite">
           <div className="border p-3 rounded">
             <p className="text-sm">You are not logged in.</p>
             <div className="flex">

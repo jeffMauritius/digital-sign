@@ -12,7 +12,7 @@ export default function HomePage() {
         <div className="container h-20 flex items-center">
           <Link
             href="/"
-            className="flex hidden justify-start items-center hover:opacity-85 transition-opacity duration-300"
+            className="hidden justify-start items-center hover:opacity-85 transition-opacity duration-300"
           >
             <Image src={"/logo.png"} alt={"logo"} width={250} height={60} />
           </Link>

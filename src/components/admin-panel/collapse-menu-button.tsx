@@ -80,7 +80,7 @@ export function CollapseMenuButton({
                     : "-translate-x-96 opacity-0",
                 )}
               >
-                {t(label)}
+                {label}
               </p>
             </div>
             <div
@@ -161,7 +161,7 @@ export function CollapseMenuButton({
       </TooltipProvider>
       <DropdownMenuContent side="right" sideOffset={25} align="start">
         <DropdownMenuLabel className="max-w-[190px] truncate">
-          {label}
+          {t(label)}
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         {submenus.map(({ href, label }, index) => (

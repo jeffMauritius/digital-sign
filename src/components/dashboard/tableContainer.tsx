@@ -13,8 +13,6 @@ import { ScrollArea } from "../ui/scroll-area"
 import { EnvelopeOpenIcon, Pencil1Icon } from "@radix-ui/react-icons"
 
 const TableContainer = (data: any) => {
-  console.log("dataYYYYY", data)
-
   return (
     <Table
       className=""

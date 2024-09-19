@@ -21,7 +21,6 @@ const CardContainer: React.FC<CardContainerProps> = ({
   footerDescription,
   data,
 }) => {
-  console.log("dataXXXX", data)
   return (
     <Card>
       <CardHeader>

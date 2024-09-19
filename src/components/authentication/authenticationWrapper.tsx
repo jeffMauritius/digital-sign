@@ -9,7 +9,14 @@ import {
   DrawerTrigger,
 } from "../ui/drawer"
 import { useMediaQuery } from "@/hooks/use-media-query"
-import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../ui/dialog"
 import { useSession } from "next-auth/react"
 
 const AuthenticationWrapper = ({ children }: { children: React.ReactNode }) => {
@@ -40,7 +47,15 @@ const AuthenticationWrapper = ({ children }: { children: React.ReactNode }) => {
             </Button>
           </span>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">{children}</DialogContent>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>Sign in to connect</DialogTitle>
+            <DialogDescription>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </DialogDescription>
+          </DialogHeader>
+          {children}
+        </DialogContent>
       </Dialog>
     )
   }
