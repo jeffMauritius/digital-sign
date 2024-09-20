@@ -1,25 +1,18 @@
 "use client"
 
-import Link from "next/link"
 import { useSession } from "next-auth/react"
 
 import { ContentLayout } from "@/components/admin-panel/content-layout"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+
 import AuthenticationWrapper from "@/components/authentication/authenticationWrapper"
 import AuthForm from "@/components/authentication/authForm"
 import { useTranslations } from "next-intl"
-import TabContainer from "@/components/dashboard/tabContainer"
-import data from "@/app/data/dashboard/index.json"
+import TabContainer from "@/components/tableComponent/tabContainer"
+import config from "@/components/tableComponent/config.json"
+import BreadcrumbComponent from "@/components/breadcrumbComponent"
 
 export default function DashboardPage() {
-  const { data: session } = useSession()
+  const { data: session, status } = useSession()
   const t = useTranslations()
 
   if (status === "loading") {
@@ -28,19 +21,7 @@ export default function DashboardPage() {
 
   return (
     <ContentLayout title={t("dashboard.title")}>
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link href="/dashboard">{t("breadcrumb.home")}</Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>{t("breadcrumb.dashboard")}</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+      <BreadcrumbComponent t={t} name="dashboard" />
       {!session && (
         <div className="h-60 grid gap-4 content-center" aria-live="polite">
           <div className="border p-3 rounded">
@@ -54,8 +35,8 @@ export default function DashboardPage() {
         </div>
       )}
       {session && (
-        <div className="pt-5">
-          <TabContainer data={data} />
+        <div className="pt-10">
+          <TabContainer config={config} page="dashboard" t={t} />
         </div>
       )}
     </ContentLayout>

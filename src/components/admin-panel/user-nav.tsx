@@ -24,13 +24,12 @@ import { signOut, useSession } from "next-auth/react"
 import { useState } from "react"
 
 export function UserNav() {
-  const { data: session, status } = useSession()
-
-  console.log("session", session)
+  const { data: session } = useSession()
+  const urlImage = session?.user?.image
 
   return (
     <DropdownMenu>
-      <TooltipProvider disableHoverableContent>
+      <TooltipProvider>
         <Tooltip delayDuration={100}>
           <TooltipTrigger asChild>
             <DropdownMenuTrigger asChild>
@@ -39,8 +38,8 @@ export function UserNav() {
                 className="relative h-8 w-8 rounded-full"
               >
                 <Avatar className="h-8 w-8">
-                  <AvatarImage src="#" alt="Avatar" />
-                  <AvatarFallback className="bg-transparent">JD</AvatarFallback>
+                  <AvatarImage src={urlImage || undefined} alt="Avatar" />
+                  <AvatarFallback className="bg-transparent">JF</AvatarFallback>
                 </Avatar>
               </Button>
             </DropdownMenuTrigger>

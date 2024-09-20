@@ -1,31 +1,13 @@
-import Link from "next/link"
-
 import { ContentLayout } from "@/components/admin-panel/content-layout"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+import BreadcrumbComponent from "@/components/breadcrumbComponent"
+import { useTranslations } from "next-intl"
 
 export default function DrivePage() {
+  const t = useTranslations()
+
   return (
     <ContentLayout title="Drive">
-      <Breadcrumb>
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link href="/">Home</Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>Drive</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+      <BreadcrumbComponent t={t} page="drive" name="drive" />
       Drive
     </ContentLayout>
   )

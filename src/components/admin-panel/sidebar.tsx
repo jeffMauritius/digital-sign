@@ -40,7 +40,7 @@ export function Sidebar() {
                 height={60}
               />
             ) : (
-              <Image src={"/logo.png"} alt={"logo"} width={250} height={60} />
+              <Image src={"/logo.png"} alt={"logo"} width={180} height={50} />
             )}
           </Link>
         </Button>
