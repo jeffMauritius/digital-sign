@@ -1,50 +1,69 @@
 {
   "langSwitcher": {
-    "fr": "French",
-    "en": "English",
-    "label": "Language"
+    "fr": "Français",
+    "en": "Anglais",
+    "label": "Langage"
   },
   "dashboard": {
-    "title": "Dashboard"
+    "title": "Home",
+    "tabLabels": {
+      "toSign": "A signer",
+      "waiting": "En attente",
+      "draft": "Brouillons"
+    },
+    "table": {
+      "title": {
+        "toSign": "Documents à signer",
+        "waiting": "Documents envoyés pour signature",
+        "draft": "Vos brouillons"
+      },
+      "description": {
+        "toSign": "Besoin de votre signature",
+        "waiting": "En attente de signature",
+        "draft": "Vos brouillons en attente"
+      }
+    },
+    "card": {}
   },
   "sign": {
     "title": "Signez"
   },
   "breadcrumb": {
-    "home": "Home",
-    "dashboard": "Dashboard",
-    "sign": "Sign",
-    "sendRequest": "Send request",
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "sign": "Signez",
+    "sendRequest": "Demande de signature",
     "models": {
-      "create": "Create model",
-      "manage": "Manage model",
-      "label": "Models"
-    }
+      "label": "Modèles",
+      "create": "Créer un modèle",
+      "manage": "Gérer les modèles"
+    },
+    "drive": "Lecteur DSign"
   },
   "sidebar": {
-    "dashboard": "Dashboard",
-    "sign": "Sign",
-    "sendRequest": "Send request",
+    "dashboard": "Tableau de bord",
+    "sign": "Signez",
+    "sendRequest": "Demande de signature",
     "models": {
-      "create": "Create model",
-      "manage": "Manage model",
-      "label": "Models"
-    },
-    "drive": "Drive Digital sign",
-    "reports": {
-      "label": "Reports",
-      "needSignature": "Need signature",
-      "inProgress": "In progress",
-      "complete": "Complete",
-      "draft": "Draft",
-      "signatureRefused": "Signature refused",
-      "exped": "Exped",
-      "contacts": "Contacts"
+      "label": "Modéles",
+      "create": "Créer un modèle",
+      "manage": "Gérer les modèles"
     },
     "settings": {
-      "label": "Settings",
-      "mySignature": "My signature",
-      "users": "Users"
+      "label": "Paramétres",
+      "mySignature": "Ma signature",
+      "users": "Utilisateurs"
+    },
+    "drive": "Lecteur DSign",
+    "reports": {
+      "label": "Rapports",
+      "needSignature": "Besoin de signature",
+      "inProgress": "En cours",
+      "complete": "Complétés",
+      "draft": "Brouillons",
+      "signatureRefused": "Signature refusé",
+      "exped": "Expiré",
+      "contacts": "Contacts"
     }
   }
 }

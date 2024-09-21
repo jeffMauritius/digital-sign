@@ -10,7 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 
-export default function ModelsPage() {
+export default function ManageModels() {
   return (
     <ContentLayout title="All Posts">
       <Breadcrumb>

@@ -95,7 +95,7 @@ const SignInForm = () => {
                 href="/register"
                 className="ml-auto inline-block text-sm underline"
               >
-                Don't have an account?
+                Don&apos;t have an account?
               </Link>
             </div>
           </div>
