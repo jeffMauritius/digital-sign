@@ -1,0 +1,88 @@
+{
+  "enums": {
+    "status": {
+      "TO_SIGN": "Para firmar",
+      "WAITING": "En espera",
+      "DRAFT": "Borrador",
+      "COMPLETED": "Completado",
+      "EXPIRED": "Expirado",
+      "SIGNATURE_REFUSED": "Firma rechazada",
+      "IN_PROGRESS": "En progreso",
+      "SIGNED": "Firmado",
+      "UNSIGNED": "No firmado"
+    }
+  },
+  "langSwitcher": {
+    "fr": "Francés",
+    "en": "Inglés",
+    "es": "Español",
+    "de": "Alemán",
+    "label": "Idioma"
+  },
+  "dashboard": {
+    "title": "Tablero",
+    "tabLabels": {
+      "toSign": "Para firmar",
+      "waiting": "En espera",
+      "draft": "Borradores"
+    },
+    "table": {
+      "title": {
+        "toSign": "Documentos para firmar",
+        "waiting": "Documentos enviados para firma",
+        "draft": "Tus borradores"
+      },
+      "description": {
+        "toSign": "Necesita tu firma",
+        "waiting": "En espera de firma",
+        "draft": "Tus borradores en espera"
+      }
+    },
+    "card": {}
+  },
+  "sign": {
+    "title": "Firmar"
+  },
+  "sendRequest": {
+    "title": "Enviar una solicitud de firma"
+  },
+  "breadcrumb": {
+    "home": "Inicio",
+    "dashboard": "Tablero",
+    "sign": "Firmar",
+    "sendRequest": "Solicitud de firma",
+    "models": {
+      "label": "Modelos",
+      "create": "Crear un modelo",
+      "manage": "Gestionar modelos"
+    },
+    "drive": "Unidad DSign",
+    "profile": "Configuración de la cuenta"
+  },
+  "sidebar": {
+    "dashboard": "Tablero",
+    "sign": "Firmar",
+    "sendRequest": "Solicitud de firma",
+    "models": {
+      "label": "Modelos",
+      "create": "Crear un modelo",
+      "manage": "Gestionar modelos"
+    },
+    "settings": {
+      "label": "Configuraciones",
+      "mySignature": "Mi firma",
+      "users": "Usuarios"
+    },
+    "drive": "Unidad DSign",
+    "reports": {
+      "label": "Informes",
+      "needSignature": "Necesita firma",
+      "inProgress": "En progreso",
+      "complete": "Completados",
+      "draft": "Borradores",
+      "signatureRefused": "Firma rechazada",
+      "exped": "Expirado",
+      "contacts": "Contactos"
+    }
+  }
+}

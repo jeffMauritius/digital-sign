@@ -24,7 +24,7 @@ describe("SelectComponent", () => {
     const values = { value1: "Value 1", value2: "Value 2" }
     const enumType = "enumType"
 
-    render(<SelectComponent values={values} enumType={enumType} />)
+    render(<SelectComponent values={values} enumType={enumType} name={""} />)
 
     expect(screen.getByRole("combobox")).toBeInTheDocument()
   })

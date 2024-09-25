@@ -1,85 +1,87 @@
 {
   "enums": {
     "status": {
-      "TO_SIGN": "A signer",
-      "WAITING": "En attente",
-      "DRAFT": "Brouillon",
-      "COMPLETED": "Complété",
-      "EXPIRED": "Expiré",
-      "SIGNATURE_REFUSED": "Signature refusé",
-      "IN_PROGRESS": "En cours",
-      "SIGNED": "Signé",
-      "UNSIGNED": "Non signé"
+      "TO_SIGN": "To sign",
+      "WAITING": "Waiting",
+      "DRAFT": "Draft",
+      "COMPLETED": "Completed",
+      "EXPIRED": "Expired",
+      "SIGNATURE_REFUSED": "Signature refused",
+      "IN_PROGRESS": "In progress",
+      "SIGNED": "Signed",
+      "UNSIGNED": "Unsigned"
     }
   },
   "langSwitcher": {
-    "fr": "Français",
-    "en": "Anglais",
-    "label": "Langage"
+    "fr": "French",
+    "en": "English",
+    "es": "Spanish",
+    "de": "German",
+    "label": "Language"
   },
   "dashboard": {
-    "title": "Tableau de bord",
+    "title": "Dashboard",
     "tabLabels": {
-      "toSign": "A signer",
-      "waiting": "En attente",
-      "draft": "Brouillons"
+      "toSign": "To sign",
+      "waiting": "Waiting",
+      "draft": "Drafts"
     },
     "table": {
       "title": {
-        "toSign": "Documents à signer",
-        "waiting": "Documents envoyés pour signature",
-        "draft": "Vos brouillons"
+        "toSign": "Documents to sign",
+        "waiting": "Documents sent for signature",
+        "draft": "Your drafts"
       },
       "description": {
-        "toSign": "Besoin de votre signature",
-        "waiting": "En attente de signature",
-        "draft": "Vos brouillons en attente"
+        "toSign": "Needs your signature",
+        "waiting": "Waiting for signature",
+        "draft": "Your drafts pending"
       }
     },
     "card": {}
   },
   "sign": {
-    "title": "Signez"
+    "title": "Sign"
   },
   "sendRequest": {
-    "title": "Envoyer une demande de signature"
+    "title": "Send a signature request"
   },
   "breadcrumb": {
-    "home": "Accueil",
-    "dashboard": "Tableau de bord",
-    "sign": "Signez",
-    "sendRequest": "Demande de signature",
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "sign": "Sign",
+    "sendRequest": "Signature request",
     "models": {
-      "label": "Modèles",
-      "create": "Créer un modèle",
-      "manage": "Gérer les modèles"
+      "label": "Templates",
+      "create": "Create a template",
+      "manage": "Manage templates"
     },
-    "drive": "Lecteur DSign",
-    "profile": "Paramétres du compte"
+    "drive": "DSign Drive",
+    "profile": "Account settings"
   },
   "sidebar": {
-    "dashboard": "Tableau de bord",
-    "sign": "Signez",
-    "sendRequest": "Demande de signature",
+    "dashboard": "Dashboard",
+    "sign": "Sign",
+    "sendRequest": "Signature request",
     "models": {
-      "label": "Modéles",
-      "create": "Créer un modèle",
-      "manage": "Gérer les modèles"
+      "label": "Templates",
+      "create": "Create a template",
+      "manage": "Manage templates"
     },
     "settings": {
-      "label": "Paramétres",
-      "mySignature": "Ma signature",
-      "users": "Utilisateurs"
+      "label": "Settings",
+      "mySignature": "My signature",
+      "users": "Users"
     },
-    "drive": "Lecteur DSign",
+    "drive": "DSign Drive",
     "reports": {
-      "label": "Rapports",
-      "needSignature": "Besoin de signature",
-      "inProgress": "En cours",
-      "complete": "Complétés",
-      "draft": "Brouillons",
-      "signatureRefused": "Signature refusé",
-      "exped": "Expiré",
+      "label": "Reports",
+      "needSignature": "Needs signature",
+      "inProgress": "In progress",
+      "complete": "Completed",
+      "draft": "Drafts",
+      "signatureRefused": "Signature refused",
+      "exped": "Expired",
       "contacts": "Contacts"
     }
   }

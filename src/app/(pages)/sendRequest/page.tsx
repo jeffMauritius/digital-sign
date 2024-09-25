@@ -19,13 +19,13 @@ const CreateDocumentForm = () => {
 
   const handleSubmit = async (formData: FormData) => {
     const r = await createDocument({
-      title: formData.get("title"),
-      folder: formData.get("folder"),
-      fileName: formData.get("fileName"),
-      description: formData.get("description"),
-      owner: formData.get("owner"),
-      signers: formData.get("signers"),
-      status: formData.get("status"),
+      title: (formData.get("title") as string) || "",
+      folder: (formData.get("folder") as string) || "",
+      fileName: (formData.get("fileName") as string) || "",
+      description: (formData.get("description") as string) || "",
+      owner: (formData.get("owner") as string) || "",
+      signers: (formData.get("signers") as string) || "",
+      status: (formData.get("status") as string) || "",
     })
     ref.current?.reset()
     return router.push("/sendRequest")
@@ -58,12 +58,17 @@ const CreateDocumentForm = () => {
           </div>
           <div>
             <Label htmlFor="status">Status</Label>
-            <SelectComponent values={DocumentStatus} enumType="enums.status" />
+            <SelectComponent
+              values={DocumentStatus}
+              enumType="enums.status"
+              name="status"
+            />
           </div>
           <div>
             <Label htmlFor="signers">Signers</Label>
-
-            <Input id="signers" name="signers" placeholder="signers" required />
+            <div className="flex items-center space-x-2">
+              <Input id="signers" name="signers" required />
+            </div>
           </div>
         </div>
 

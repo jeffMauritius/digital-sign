@@ -13,6 +13,7 @@ import { z } from "zod"
 const SelectComponentSchema = z.object({
   values: z.record(z.unknown()),
   enumType: z.string(),
+  name: z.string(),
 })
 
 interface SelectComponentProps extends z.infer<typeof SelectComponentSchema> {}
@@ -20,14 +21,15 @@ interface SelectComponentProps extends z.infer<typeof SelectComponentSchema> {}
 const SelectComponent: React.FC<SelectComponentProps> = ({
   values,
   enumType,
+  name,
 }) => {
-  SelectComponentSchema.parse({ values, enumType })
+  SelectComponentSchema.parse({ values, enumType, name })
 
   const optionValues = useMemo(() => Object.keys(values), [values])
   const t = useTranslations()
 
   return (
-    <Select>
+    <Select name={name}>
       <SelectTrigger className="w-full">
         <SelectValue placeholder="" />
       </SelectTrigger>

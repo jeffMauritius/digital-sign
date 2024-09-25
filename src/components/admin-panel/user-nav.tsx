@@ -20,8 +20,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { signOut, useSession } from "next-auth/react"
-import { useState } from "react"
+import { signIn, signOut, useSession } from "next-auth/react"
+import { redirect } from "next/navigation"
 
 export function UserNav() {
   const { data: session } = useSession()
@@ -39,7 +39,9 @@ export function UserNav() {
               >
                 <Avatar className="h-8 w-8">
                   <AvatarImage src={urlImage || undefined} alt="Avatar" />
-                  <AvatarFallback className="bg-transparent">JF</AvatarFallback>
+                  <AvatarFallback className="bg-transparent">
+                    <User className="w-4 h-4" />
+                  </AvatarFallback>
                 </Avatar>
               </Button>
             </DropdownMenuTrigger>
@@ -78,11 +80,14 @@ export function UserNav() {
         <DropdownMenuItem
           className="hover:cursor-pointer"
           onClick={() => {
-            signOut()
+            if (session) {
+              signOut()
+            }
+            redirect("/dashboard")
           }}
         >
           <LogOut className="w-4 h-4 mr-3 text-muted-foreground" />
-          Sign out
+          {session ? "Sign out" : "sign in"}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
