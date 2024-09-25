@@ -50,9 +50,9 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/sign",
+          href: "/signYourself",
           label: "sidebar.sign",
-          active: pathname.includes("/sign"),
+          active: pathname.includes("/signYourself"),
           icon: FilePen,
           submenus: [],
         },

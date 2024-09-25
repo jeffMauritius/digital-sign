@@ -10,6 +10,8 @@ import { useTranslations } from "next-intl"
 import TabContainer from "@/components/tableComponent/tabContainer"
 import config from "@/components/tableComponent/config.json"
 import BreadcrumbComponent from "@/components/breadcrumbComponent"
+import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function DashboardPage() {
   const { data: session, status } = useSession()
@@ -36,6 +38,14 @@ export default function DashboardPage() {
       )}
       {session && (
         <div className="pt-10">
+          <div className="grid grid-cols-2 gap-4 pb-5">
+            <Button asChild>
+              <Link href="/signYourself">Signez vous même</Link>
+            </Button>
+            <Button asChild>
+              <Link href="/sendRequest">Créer une demande de signature</Link>
+            </Button>
+          </div>
           <TabContainer config={config} page="dashboard" t={t} />
         </div>
       )}

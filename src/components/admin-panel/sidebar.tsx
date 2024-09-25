@@ -36,11 +36,11 @@ export function Sidebar() {
               <Image
                 src={"/logo-icon.png"}
                 alt={"logo"}
-                width={250}
-                height={60}
+                width={100}
+                height={40}
               />
             ) : (
-              <Image src={"/logo.png"} alt={"logo"} width={180} height={50} />
+              <Image src={"/logo.png"} alt={"logo"} width={120} height={50} />
             )}
           </Link>
         </Button>

@@ -9,9 +9,21 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "./ui/tooltip"
+import { z } from "zod"
 
-export default function ToggleFullScreen() {
-  const [toggleIcon, setToggleIcon] = useState(true)
+// Define a schema for the props using zod
+const ToggleFullScreenPropsSchema = z.object({
+  initialToggleIcon: z.boolean().optional(),
+})
+
+type ToggleFullScreenProps = z.infer<typeof ToggleFullScreenPropsSchema>
+
+export default function ToggleFullScreen(props: ToggleFullScreenProps) {
+  const parsedProps = ToggleFullScreenPropsSchema.parse(props)
+
+  const [toggleIcon, setToggleIcon] = useState(
+    parsedProps.initialToggleIcon ?? true,
+  )
 
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {

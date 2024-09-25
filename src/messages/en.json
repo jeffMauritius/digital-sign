@@ -1,11 +1,24 @@
 {
+  "enums": {
+    "status": {
+      "TO_SIGN": "A signer",
+      "WAITING": "En attente",
+      "DRAFT": "Brouillon",
+      "COMPLETED": "Complété",
+      "EXPIRED": "Expiré",
+      "SIGNATURE_REFUSED": "Signature refusé",
+      "IN_PROGRESS": "En cours",
+      "SIGNED": "Signé",
+      "UNSIGNED": "Non signé"
+    }
+  },
   "langSwitcher": {
     "fr": "Français",
     "en": "Anglais",
     "label": "Langage"
   },
   "dashboard": {
-    "title": "Home",
+    "title": "Tableau de bord",
     "tabLabels": {
       "toSign": "A signer",
       "waiting": "En attente",
@@ -28,6 +41,9 @@
   "sign": {
     "title": "Signez"
   },
+  "sendRequest": {
+    "title": "Envoyer une demande de signature"
+  },
   "breadcrumb": {
     "home": "Accueil",
     "dashboard": "Tableau de bord",
@@ -38,7 +54,8 @@
       "create": "Créer un modèle",
       "manage": "Gérer les modèles"
     },
-    "drive": "Lecteur DSign"
+    "drive": "Lecteur DSign",
+    "profile": "Paramétres du compte"
   },
   "sidebar": {
     "dashboard": "Tableau de bord",
