@@ -9,7 +9,7 @@ import AuthForm from "@/components/authentication/authForm"
 import { useTranslations } from "next-intl"
 import TabContainer from "@/components/tableComponent/tabContainer"
 import config from "@/components/tableComponent/config.json"
-import UploadFileComponent from "@/components/dashboard/uploadFileComponent"
+import UploadFileComponent from "@/components/uploadFileComponent"
 
 export default function DashboardPage() {
   const { data: session, status } = useSession()
