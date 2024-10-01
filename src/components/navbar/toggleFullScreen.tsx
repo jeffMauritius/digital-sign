@@ -1,14 +1,14 @@
 "use client"
 
 import React, { useState } from "react"
-import { Button } from "./ui/button"
+import { Button } from "../ui/button"
 import { EnterFullScreenIcon, ExitFullScreenIcon } from "@radix-ui/react-icons"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip"
+} from "../ui/tooltip"
 import { z } from "zod"
 
 // Define a schema for the props using zod

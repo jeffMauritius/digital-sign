@@ -7,11 +7,10 @@ import { ContentLayout } from "@/components/admin-panel/content-layout"
 import AuthenticationWrapper from "@/components/authentication/authenticationWrapper"
 import AuthForm from "@/components/authentication/authForm"
 import { useTranslations } from "next-intl"
-import TabContainer from "@/components/tableComponent/tabContainer"
-import config from "@/components/tableComponent/config.json"
 import UploadFileComponent from "@/components/dashboard/uploadFileComponent"
+import DocumentTable from "@/components/documents/table"
 
-export default function DashboardPage() {
+export default function DocumentsPage() {
   const { data: session, status } = useSession()
   const t = useTranslations()
 
@@ -37,8 +36,8 @@ export default function DashboardPage() {
         <div className="pt-10">
           <div className="grid grid-cols gap-4 pb-5">
             <UploadFileComponent />
+            <DocumentTable />
           </div>
-          <TabContainer config={config} page="dashboard" t={t} />
         </div>
       )}
     </ContentLayout>

@@ -6,8 +6,8 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/dropdown-menu"
-import { Button } from "./ui/button"
+} from "../ui/dropdown-menu"
+import { Button } from "../ui/button"
 import { Languages } from "lucide-react"
 import { setUserLocale } from "@/services/locale"
 import { Locale } from "@/i18n/config"
@@ -16,7 +16,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip"
+} from "../ui/tooltip"
 
 type Props = {
   defaultValue: string
