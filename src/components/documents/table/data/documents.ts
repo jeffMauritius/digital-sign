@@ -6,7 +6,7 @@ export const documents = [
   "title": "Task 1",
   "recipient": "Recipient 1",
   "status": "Pending",
-  "actions": "Action 1"
+  "actions": "Sign"
 },
 {
   "id": "2",
@@ -14,7 +14,7 @@ export const documents = [
   "title": "Task 2",
   "recipient": "Recipient 2",
   "status": "Completed",
-  "actions": "Action 2"
+  "actions": "Sign"
 },
 {
   "id": "3",
@@ -22,7 +22,7 @@ export const documents = [
   "title": "Task 3",
   "recipient": "Recipient 3",
   "status": "In Progress",
-  "actions": "Action 3"
+  "actions": "Edit"
 },
 {
   "id": "4",
@@ -30,7 +30,7 @@ export const documents = [
   "title": "Task 4",
   "recipient": "Recipient 4",
   "status": "Pending",
-  "actions": "Action 4"
+  "actions": "Download"
 },
 {
   "id": "5",
@@ -38,7 +38,7 @@ export const documents = [
   "title": "Task 5",
   "recipient": "Recipient 5",
   "status": "Completed",
-  "actions": "Action 5"
+  "actions": "Download"
 },
 {
   "id": "6",
@@ -46,7 +46,7 @@ export const documents = [
   "title": "Task 6",
   "recipient": "Recipient 6",
   "status": "In Progress",
-  "actions": "Action 6"
+  "actions": "Edit"
 },
 {
   "id": "7",
@@ -54,7 +54,7 @@ export const documents = [
   "title": "Task 7",
   "recipient": "Recipient 7",
   "status": "Pending",
-  "actions": "Action 7"
+  "actions": "Edit"
 },
 {
   "id": "8",
@@ -62,7 +62,7 @@ export const documents = [
   "title": "Task 8",
   "recipient": "Recipient 8",
   "status": "Completed",
-  "actions": "Action 8"
+  "actions": "Download"
 },
 {
   "id": "9",
@@ -70,7 +70,7 @@ export const documents = [
   "title": "Task 9",
   "recipient": "Recipient 9",
   "status": "In Progress",
-  "actions": "Action 9"
+  "actions": "Sign"
 },
 {
   "id": "10",
@@ -78,7 +78,7 @@ export const documents = [
   "title": "Task 10",
   "recipient": "Recipient 10",
   "status": "Pending",
-  "actions": "Action 10"
+  "actions": "Sign"
 },
 {
   "id": "11",
@@ -86,7 +86,7 @@ export const documents = [
   "title": "Task 11",
   "recipient": "Recipient 11",
   "status": "Completed",
-  "actions": "Action 11"
+  "actions": "Download"
 },
 {
   "id": "12",
@@ -94,7 +94,7 @@ export const documents = [
   "title": "Task 12",
   "recipient": "Recipient 12",
   "status": "In Progress",
-  "actions": "Action 12"
+  "actions": "Download"
 },
 {
   "id": "13",
@@ -102,7 +102,7 @@ export const documents = [
   "title": "Task 13",
   "recipient": "Recipient 13",
   "status": "Pending",
-  "actions": "Action 13"
+  "actions": "Edit"
 },
 {
   "id": "14",

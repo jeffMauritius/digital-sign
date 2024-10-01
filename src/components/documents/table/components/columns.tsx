@@ -126,7 +126,9 @@ export const columns: ColumnDef<Document>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <Button>{row.getValue("actions")}</Button>
+          <Button size={"sm"} className="w-1/2">
+            {row.getValue("actions")}
+          </Button>
 
           <DataTableRowActions row={row} />
         </div>
