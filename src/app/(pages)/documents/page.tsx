@@ -7,7 +7,6 @@ import { ContentLayout } from "@/components/admin-panel/content-layout"
 import AuthenticationWrapper from "@/components/authentication/authenticationWrapper"
 import AuthForm from "@/components/authentication/authForm"
 import { useTranslations } from "next-intl"
-import UploadFileComponent from "@/components/dashboard/uploadFileComponent"
 import DocumentTable from "@/components/documents/table"
 
 export default function DocumentsPage() {
