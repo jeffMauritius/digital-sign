@@ -5,11 +5,14 @@ import { ColumnDef } from "@tanstack/react-table"
 import { Badge } from "@/components/ui/badge"
 import { Checkbox } from "@/components/ui/checkbox"
 
-import { labels, priorities, statuses } from "../data/data"
+import { labels } from "../data/data"
 import { Document } from "../data/schema"
 import { DataTableColumnHeader } from "./data-table-column-header"
 import { DataTableRowActions } from "./data-table-row-actions"
 import { Button } from "@/components/ui/button"
+import { Pencil as Sign } from "lucide-react"
+import { Download as Download } from "lucide-react"
+import { FileText as Edit } from "lucide-react"
 
 export const columns: ColumnDef<Document>[] = [
   {
@@ -124,9 +127,22 @@ export const columns: ColumnDef<Document>[] = [
       <DataTableColumnHeader column={column} title="Actions" />
     ),
     cell: ({ row }) => {
+      const getIconComponent = (action: string) => {
+        switch (action) {
+          case "Edit":
+            return <Edit className="mr-2 h-4 w-4" />
+          case "Download":
+            return <Download className="mr-2 h-4 w-4" />
+          case "Sign":
+            return <Sign className="mr-2 h-4 w-4" />
+          default:
+            return <Edit className="mr-2 h-4 w-4" />
+        }
+      }
       return (
         <div className="flex space-x-2">
           <Button size={"sm"} className="w-1/2">
+            {getIconComponent(row.getValue("actions"))}
             {row.getValue("actions")}
           </Button>
 

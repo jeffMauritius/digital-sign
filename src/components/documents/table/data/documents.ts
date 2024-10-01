@@ -21,7 +21,7 @@ export const documents = [
   "created": "2023-01-03",
   "title": "Task 3",
   "recipient": "Recipient 3",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Edit"
 },
 {
@@ -45,7 +45,7 @@ export const documents = [
   "created": "2023-01-06",
   "title": "Task 6",
   "recipient": "Recipient 6",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Edit"
 },
 {
@@ -69,7 +69,7 @@ export const documents = [
   "created": "2023-01-09",
   "title": "Task 9",
   "recipient": "Recipient 9",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Sign"
 },
 {
@@ -93,7 +93,7 @@ export const documents = [
   "created": "2023-01-12",
   "title": "Task 12",
   "recipient": "Recipient 12",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Download"
 },
 {
@@ -117,7 +117,7 @@ export const documents = [
   "created": "2023-01-15",
   "title": "Task 15",
   "recipient": "Recipient 15",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 15"
 },
 {
@@ -141,7 +141,7 @@ export const documents = [
   "created": "2023-01-18",
   "title": "Task 18",
   "recipient": "Recipient 18",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 18"
 },
 {
@@ -165,7 +165,7 @@ export const documents = [
   "created": "2023-01-21",
   "title": "Task 21",
   "recipient": "Recipient 21",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 21"
 },
 {
@@ -189,7 +189,7 @@ export const documents = [
   "created": "2023-01-24",
   "title": "Task 24",
   "recipient": "Recipient 24",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 24"
 },
 {
@@ -213,7 +213,7 @@ export const documents = [
   "created": "2023-01-27",
   "title": "Task 27",
   "recipient": "Recipient 27",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 27"
 },
 {
@@ -237,7 +237,7 @@ export const documents = [
   "created": "2023-01-30",
   "title": "Task 30",
   "recipient": "Recipient 30",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 30"
 },
 {
@@ -261,7 +261,7 @@ export const documents = [
   "created": "2023-02-02",
   "title": "Task 33",
   "recipient": "Recipient 33",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 33"
 },
 {
@@ -269,7 +269,7 @@ export const documents = [
   "created": "2023-02-03",
   "title": "Task 34",
   "recipient": "Recipient 34",
-  "status": "Pending",
+  "status": "Draft",
   "actions": "Action 34"
 },
 {
@@ -285,7 +285,7 @@ export const documents = [
   "created": "2023-02-05",
   "title": "Task 36",
   "recipient": "Recipient 36",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 36"
 },
 {
@@ -293,7 +293,7 @@ export const documents = [
   "created": "2023-02-06",
   "title": "Task 37",
   "recipient": "Recipient 37",
-  "status": "Pending",
+  "status": "Draft",
   "actions": "Action 37"
 },
 {
@@ -309,7 +309,7 @@ export const documents = [
   "created": "2023-02-08",
   "title": "Task 39",
   "recipient": "Recipient 39",
-  "status": "In Progress",
+  "status": "Inbox",
   "actions": "Action 39"
 },
 {
@@ -333,7 +333,7 @@ export const documents = [
   "created": "2023-02-11",
   "title": "Task 42",
   "recipient": "Recipient 42",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 42"
 },
 {
@@ -341,7 +341,7 @@ export const documents = [
   "created": "2023-02-12",
   "title": "Task 43",
   "recipient": "Recipient 43",
-  "status": "Pending",
+  "status": "Inbox",
   "actions": "Action 43"
 },
 {
@@ -357,7 +357,7 @@ export const documents = [
   "created": "2023-02-14",
   "title": "Task 45",
   "recipient": "Recipient 45",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 45"
 },
 {
@@ -381,7 +381,7 @@ export const documents = [
   "created": "2023-02-17",
   "title": "Task 48",
   "recipient": "Recipient 48",
-  "status": "In Progress",
+  "status": "Pending",
   "actions": "Action 48"
 },
 {
@@ -389,7 +389,7 @@ export const documents = [
   "created": "2023-02-18",
   "title": "Task 49",
   "recipient": "Recipient 49",
-  "status": "Pending",
+  "status": "Inbox",
   "actions": "Action 49"
 },
 {

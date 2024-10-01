@@ -4,6 +4,7 @@ import Image from "next/image"
 import { columns } from "./components/columns"
 import { DataTable } from "./components/data-table"
 import { documents } from "./data/documents"
+import UploadFileComponent from "@/components/uploadFileComponent"
 
 export const metadata: Metadata = {
   title: "Tasks",
@@ -38,6 +39,7 @@ export default function DocumentsTable() {
             </p>
           </div>
         </div>
+        <UploadFileComponent />
         <DataTable data={documents} columns={columns} />
       </div>
     </>

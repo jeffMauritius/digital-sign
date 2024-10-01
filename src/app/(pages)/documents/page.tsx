@@ -33,9 +33,8 @@ export default function DocumentsPage() {
         </div>
       )}
       {session && (
-        <div className="pt-10">
+        <div className="">
           <div className="grid grid-cols gap-4 pb-5">
-            <UploadFileComponent />
             <DocumentTable />
           </div>
         </div>

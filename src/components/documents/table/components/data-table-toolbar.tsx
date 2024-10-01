@@ -8,6 +8,8 @@ import { Input } from "@/components/ui/input"
 import { DataTableViewOptions } from "./data-table-view-options"
 
 import { statuses } from "../data/data"
+import { documents } from "../data/documents"
+import { stat } from "fs"
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>
@@ -17,6 +19,8 @@ export function DataTableToolbar<TData>({
   table,
 }: DataTableToolbarProps<TData>) {
   const isFiltered = table.getState().columnFilters.length > 0
+
+  console.log("Documents", documents)
 
   return (
     <div className="flex items-center justify-between">
@@ -34,12 +38,15 @@ export function DataTableToolbar<TData>({
           return (
             <Button
               size={"sm"}
-              variant={"ghost"}
-              className={status.color}
+              variant={"outline"}
+              className={`dark:bg-gray-700`}
               key={status.label}
             >
-              <status.icon className="mr-2 h-4 w-4" />
-              {status.label} {status.label.length}
+              <status.icon className={`mr-2 h-4 w-4 dark:${status.color} `} />
+              {status.label}{" "}
+              {status.value === "All"
+                ? documents.length
+                : documents.filter(doc => doc.status === status.value).length}
             </Button>
           )
         })}

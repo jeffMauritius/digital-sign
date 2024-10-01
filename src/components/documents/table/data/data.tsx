@@ -2,14 +2,7 @@ import {
   ArrowDownIcon,
   ArrowRightIcon,
   ArrowUpIcon,
-  CheckCircledIcon,
-  CircleIcon,
-  CrossCircledIcon,
-  QuestionMarkCircledIcon,
-  EnvelopeOpenIcon,
   EnvelopeClosedIcon,
-  ClockIcon,
-  StopwatchIcon,
 } from "@radix-ui/react-icons"
 import { CircleCheck, Clock8, Circle, CircleEllipsis } from "lucide-react"
 
@@ -30,31 +23,31 @@ export const labels = [
 
 export const statuses = [
   {
-    value: "inbox",
+    value: "Inbox",
     label: "Inbox",
     icon: EnvelopeClosedIcon,
     color: "text-blue-200",
   },
   {
-    value: "pending",
+    value: "Pending",
     label: "Pending",
     icon: Clock8,
     color: "text-fuchsia-200",
   },
   {
-    value: "completed",
+    value: "Completed",
     label: "Completed",
     icon: CircleCheck,
     color: "text-teal-200",
   },
   {
-    value: "draft",
+    value: "Draft",
     label: "Draft",
     icon: Circle,
     color: "text-lime-200",
   },
   {
-    value: "all",
+    value: "All",
     label: "All",
     icon: CircleEllipsis,
     color: "text-amber-200",
