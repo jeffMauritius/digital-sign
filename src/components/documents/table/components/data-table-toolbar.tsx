@@ -1,6 +1,5 @@
 "use client"
 
-import { Cross2Icon } from "@radix-ui/react-icons"
 import { Table } from "@tanstack/react-table"
 
 import { Button } from "@/components/ui/button"
@@ -9,7 +8,6 @@ import { DataTableViewOptions } from "./data-table-view-options"
 
 import { statuses } from "../data/data"
 import { documents } from "../data/documents"
-import { stat } from "fs"
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>
@@ -19,8 +17,6 @@ export function DataTableToolbar<TData>({
   table,
 }: DataTableToolbarProps<TData>) {
   const isFiltered = table.getState().columnFilters.length > 0
-
-  console.log("Documents", documents)
 
   return (
     <div className="flex items-center justify-between">
@@ -41,6 +37,13 @@ export function DataTableToolbar<TData>({
               variant={"outline"}
               className={`dark:bg-gray-700`}
               key={status.label}
+              onClick={() => {
+                if (status.value === "All") {
+                  table.resetColumnFilters()
+                  return
+                }
+                table.getColumn("status")?.setFilterValue(status.value)
+              }}
             >
               <status.icon className={`mr-2 h-4 w-4 dark:${status.color} `} />
               {status.label}{" "}
@@ -50,16 +53,6 @@ export function DataTableToolbar<TData>({
             </Button>
           )
         })}
-        {isFiltered && (
-          <Button
-            variant="ghost"
-            onClick={() => table.resetColumnFilters()}
-            className="h-8 px-2 lg:px-3"
-          >
-            Reset
-            <Cross2Icon className="ml-2 h-4 w-4" />
-          </Button>
-        )}
       </div>
       <DataTableViewOptions table={table} />
     </div>

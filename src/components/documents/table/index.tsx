@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "A task and issue tracker build using Tanstack Table.",
 }
 
-export default function DocumentsTable() {
+export default function DocumentsPage() {
   return (
     <>
       <div className="md:hidden">
