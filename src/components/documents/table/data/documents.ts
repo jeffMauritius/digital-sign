@@ -15,8 +15,12 @@ function generateRandomAction(): string {
   return titles[Math.floor(Math.random() * titles.length)];
 }
 
+function generateRandomId(): string {
+  return Math.floor(100000 + Math.random() * 900000).toString();
+}
+
 export const documents = Array.from({ length: 50 }, (_, index) => ({
-  id: (index + 1).toString(),
+  id: generateRandomId(),
   created: `2023-01-${String(index + 1).padStart(2, '0')}`,
   title: generateRandomTitle(),
   recipient: generateRandomEmail(),

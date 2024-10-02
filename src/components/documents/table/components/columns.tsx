@@ -9,10 +9,11 @@ import { labels } from "../data/data"
 import { Document } from "../data/schema"
 import { DataTableColumnHeader } from "./data-table-column-header"
 import { DataTableRowActions } from "./data-table-row-actions"
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Pencil as Sign } from "lucide-react"
 import { Download as Download } from "lucide-react"
 import { FileText as Edit } from "lucide-react"
+import Link from "next/link"
 
 export const columns: ColumnDef<Document>[] = [
   {
@@ -142,10 +143,14 @@ export const columns: ColumnDef<Document>[] = [
       return (
         <div className="flex space-x-2">
           <Button size={"sm"} className="w-1/2">
-            {getIconComponent(row.getValue("actions"))}
-            {row.getValue("actions")}
+            <Link
+              href={`/documents/${row.original.id}/${row.original.actions.toLowerCase()}`}
+              className="flex"
+            >
+              {getIconComponent(row.getValue("actions"))}
+              {row.getValue("actions")}
+            </Link>
           </Button>
-
           <DataTableRowActions row={row} />
         </div>
       )
