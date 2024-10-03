@@ -14,12 +14,14 @@ import {
 } from "@/components/ui/navigation-menu"
 
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 
 interface NavbarProps {
   title: string
 }
 
 export function Navbar({ title }: NavbarProps) {
+  const t = useTranslations()
   return (
     <header className="sticky top-0 z-10 w-full bg-background/95 shadow backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:shadow-secondary">
       <div className="mx-4 sm:mx-8 flex h-14 items-center">
@@ -35,12 +37,12 @@ export function Navbar({ title }: NavbarProps) {
             <NavigationMenuItem>
               <Link href="/documents" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Documents
+                  {t("navbar.documents")}
                 </NavigationMenuLink>
               </Link>
               <Link href="/models" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Modéles
+                  {t("navbar.models")}
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>

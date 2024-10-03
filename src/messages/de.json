@@ -1,17 +1,5 @@
 {
-  "enums": {
-    "status": {
-      "TO_SIGN": "Zu unterschreiben",
-      "WAITING": "Warten",
-      "DRAFT": "Entwurf",
-      "COMPLETED": "Abgeschlossen",
-      "EXPIRED": "Abgelaufen",
-      "SIGNATURE_REFUSED": "Unterschrift verweigert",
-      "IN_PROGRESS": "In Bearbeitung",
-      "SIGNED": "Unterschrieben",
-      "UNSIGNED": "Nicht unterschrieben"
-    }
-  },
+  "enums": {},
   "langSwitcher": {
     "fr": "Französisch",
     "en": "Englisch",
@@ -19,70 +7,54 @@
     "de": "Deutsch",
     "label": "Sprache"
   },
-  "dashboard": {
-    "title": "Armaturenbrett",
-    "tabLabels": {
-      "toSign": "Zu unterschreiben",
-      "waiting": "Warten",
-      "draft": "Entwürfe"
-    },
+  "navbar": {
+    "companyName": "WakaSign",
+    "documents": "Dokumente",
+    "models": "Modelle",
+    "search": "Suchen",
+    "fullScreen": "Vollbild",
+    "switchTheme": "Thema wechseln",
+    "toggleLanguage": "Sprache wechseln",
+    "profile": "Profil"
+  },
+  "documents": {
+    "title": "Dokumente",
+    "subtitle": "Dokumentenliste",
+    "uploadTitle": "Klicken Sie hier, um ein Dokument hochzuladen oder ziehen Sie es per Drag & Drop",
+    "uploadSubtitle": "Ihr Dokument muss im PDF-Format vorliegen",
     "table": {
-      "title": {
-        "toSign": "Zu unterschreibende Dokumente",
-        "waiting": "Zur Unterschrift gesendete Dokumente",
-        "draft": "Ihre Entwürfe"
+      "filter": "Dokumente filtern",
+      "toolbar": {
+        "inbox": "Posteingang",
+        "pending": "Ausstehend",
+        "completed": "Abgeschlossen",
+        "draft": "Entwurf",
+        "all": "Alle"
       },
-      "description": {
-        "toSign": "Benötigt Ihre Unterschrift",
-        "waiting": "Warten auf Unterschrift",
-        "draft": "Ihre wartenden Entwürfe"
+      "header": {
+        "ref": "Referenz",
+        "created": "Erstellt am",
+        "title": "Titel",
+        "recipient": "Empfänger",
+        "status": "Status",
+        "actions": "Aktionen"
+      },
+      "button": {
+        "edit": "Bearbeiten",
+        "sign": "Unterschreiben",
+        "download": "Herunterladen"
+      },
+      "pagination": {
+        "rowsSelected": "ausgewählte Zeile(n)",
+        "rowsPerPage": "Zeilen pro Seite",
+        "page": "Seite",
+        "of": "von"
+      },
+      "actionsToggle": {
+        "sign": "Unterschreiben",
+        "download": "Herunterladen",
+        "delete": "Löschen"
       }
-    },
-    "card": {}
-  },
-  "sign": {
-    "title": "Unterschreiben"
-  },
-  "sendRequest": {
-    "title": "Unterschriftsanforderung senden"
-  },
-  "breadcrumb": {
-    "home": "Startseite",
-    "dashboard": "Armaturenbrett",
-    "sign": "Unterschreiben",
-    "sendRequest": "Unterschriftsanforderung",
-    "models": {
-      "label": "Vorlagen",
-      "create": "Vorlage erstellen",
-      "manage": "Vorlagen verwalten"
-    },
-    "drive": "DSign-Laufwerk",
-    "profile": "Kontoeinstellungen"
-  },
-  "sidebar": {
-    "dashboard": "Armaturenbrett",
-    "sign": "Unterschreiben",
-    "sendRequest": "Unterschriftsanforderung",
-    "models": {
-      "label": "Vorlagen",
-      "create": "Vorlage erstellen",
-      "manage": "Vorlagen verwalten"
-    },
-    "settings": {
-      "label": "Einstellungen",
-      "mySignature": "Meine Unterschrift",
-      "users": "Benutzer"
-    },
-    "drive": "DSign-Laufwerk",
-    "reports": {
-      "label": "Berichte",
-      "needSignature": "Unterschrift benötigt",
-      "inProgress": "In Bearbeitung",
-      "complete": "Abgeschlossen",
-      "draft": "Entwürfe",
-      "signatureRefused": "Unterschrift verweigert",
-      "exped": "Abgelaufen",
-      "contacts": "Kontakte"
     }
   }
 }

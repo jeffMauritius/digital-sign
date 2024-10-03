@@ -1,17 +1,5 @@
 {
-  "enums": {
-    "status": {
-      "TO_SIGN": "A signer",
-      "WAITING": "En attente",
-      "DRAFT": "Brouillon",
-      "COMPLETED": "Complété",
-      "EXPIRED": "Expiré",
-      "SIGNATURE_REFUSED": "Signature refusé",
-      "IN_PROGRESS": "En cours",
-      "SIGNED": "Signé",
-      "UNSIGNED": "Non signé"
-    }
-  },
+  "enums": {},
   "langSwitcher": {
     "fr": "Français",
     "en": "Anglais",
@@ -19,70 +7,54 @@
     "de": "Allemand",
     "label": "Langage"
   },
-  "dashboard": {
-    "title": "Tableau de bord",
-    "tabLabels": {
-      "toSign": "A signer",
-      "waiting": "En attente",
-      "draft": "Brouillons"
-    },
+  "navbar": {
+    "companyName": "WakaSign",
+    "documents": "Documents",
+    "models": "Modèles",
+    "search": "Rechercher",
+    "fullScreen": "Plein écran",
+    "switchTheme": "Changer de thème",
+    "toggleLanguage": "Changer de langue",
+    "profile": "Profil"
+  },
+  "documents": {
+    "title": "Documents",
+    "subtitle": "Liste des documents",
+    "uploadTitle": "Cliquer pour télécharger ou glisser-déposer un document",
+    "uploadSubtitle": "Votre document doit être au format PDF",
     "table": {
-      "title": {
-        "toSign": "Documents à signer",
-        "waiting": "Documents envoyés pour signature",
-        "draft": "Vos brouillons"
+      "filter": "Filtrer les documents",
+      "toolbar": {
+        "inbox": "Boîte de réception",
+        "pending": "En attente",
+        "completed": "Complété",
+        "draft": "Brouillon",
+        "all": "Tous"
       },
-      "description": {
-        "toSign": "Besoin de votre signature",
-        "waiting": "En attente de signature",
-        "draft": "Vos brouillons en attente"
+      "header": {
+        "ref": "Référence",
+        "created": "Créé le",
+        "title": "Titre",
+        "recipient": "Destinataire",
+        "status": "Statut",
+        "actions": "Actions"
+      },
+      "button": {
+        "edit": "Modifier",
+        "sign": "Signer",
+        "download": "Télécharger"
+      },
+      "pagination": {
+        "rowsSelected": "ligne(s) sélectionnée(s)",
+        "rowsPerPage": "Lignes par page",
+        "page": "Page",
+        "of": "de"
+      },
+      "actionsToggle": {
+        "sign": "Signer",
+        "download": "Télécharger",
+        "delete": "Supprimer"
       }
-    },
-    "card": {}
-  },
-  "sign": {
-    "title": "Signez"
-  },
-  "sendRequest": {
-    "title": "Envoyer une demande de signature"
-  },
-  "breadcrumb": {
-    "home": "Accueil",
-    "dashboard": "Tableau de bord",
-    "sign": "Signez",
-    "sendRequest": "Demande de signature",
-    "models": {
-      "label": "Modèles",
-      "create": "Créer un modèle",
-      "manage": "Gérer les modèles"
-    },
-    "drive": "Lecteur DSign",
-    "profile": "Paramétres du compte"
-  },
-  "sidebar": {
-    "dashboard": "Tableau de bord",
-    "sign": "Signez",
-    "sendRequest": "Demande de signature",
-    "models": {
-      "label": "Modéles",
-      "create": "Créer un modèle",
-      "manage": "Gérer les modèles"
-    },
-    "settings": {
-      "label": "Paramétres",
-      "mySignature": "Ma signature",
-      "users": "Utilisateurs"
-    },
-    "drive": "Lecteur DSign",
-    "reports": {
-      "label": "Rapports",
-      "needSignature": "Besoin de signature",
-      "inProgress": "En cours",
-      "complete": "Complétés",
-      "draft": "Brouillons",
-      "signatureRefused": "Signature refusé",
-      "exped": "Expiré",
-      "contacts": "Contacts"
     }
   }
 }

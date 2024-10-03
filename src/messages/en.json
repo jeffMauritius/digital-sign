@@ -1,17 +1,6 @@
+
 {
-  "enums": {
-    "status": {
-      "TO_SIGN": "To sign",
-      "WAITING": "Waiting",
-      "DRAFT": "Draft",
-      "COMPLETED": "Completed",
-      "EXPIRED": "Expired",
-      "SIGNATURE_REFUSED": "Signature refused",
-      "IN_PROGRESS": "In progress",
-      "SIGNED": "Signed",
-      "UNSIGNED": "Unsigned"
-    }
-  },
+  "enums": {},
   "langSwitcher": {
     "fr": "French",
     "en": "English",
@@ -19,70 +8,54 @@
     "de": "German",
     "label": "Language"
   },
-  "dashboard": {
-    "title": "Dashboard",
-    "tabLabels": {
-      "toSign": "To sign",
-      "waiting": "Waiting",
-      "draft": "Drafts"
-    },
+  "navbar": {
+    "companyName": "WakaSign",
+    "documents": "Documents",
+    "models": "Templates",
+    "search": "Search",
+    "fullScreen": "Full Screen",
+    "switchTheme": "Switch Theme",
+    "toggleLanguage": "Toggle Language",
+    "profile": "Profile"
+  },
+  "documents": {
+    "title": "Documents",
+    "subtitle": "Document List",
+    "uploadTitle": "Click to upload or drag and drop a document",
+    "uploadSubtitle": "Your document must be in PDF format",
     "table": {
-      "title": {
-        "toSign": "Documents to sign",
-        "waiting": "Documents sent for signature",
-        "draft": "Your drafts"
+      "filter": "Filter documents",
+      "toolbar": {
+        "inbox": "Inbox",
+        "pending": "Pending",
+        "completed": "Completed",
+        "draft": "Draft",
+        "all": "All"
       },
-      "description": {
-        "toSign": "Needs your signature",
-        "waiting": "Waiting for signature",
-        "draft": "Your drafts pending"
+      "header": {
+        "ref": "Reference",
+        "created": "Created At",
+        "title": "Title",
+        "recipient": "Recipient",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "button": {
+        "edit": "Edit",
+        "sign": "Sign",
+        "download": "Download"
+      },
+      "pagination": {
+        "rowsSelected": "row(s) selected",
+        "rowsPerPage": "Rows per page",
+        "page": "Page",
+        "of": "of"
+      },
+      "actionsToggle": {
+        "sign": "Sign",
+        "download": "Download",
+        "delete": "Delete"
       }
-    },
-    "card": {}
-  },
-  "sign": {
-    "title": "Sign"
-  },
-  "sendRequest": {
-    "title": "Send a signature request"
-  },
-  "breadcrumb": {
-    "home": "Home",
-    "dashboard": "Dashboard",
-    "sign": "Sign",
-    "sendRequest": "Signature request",
-    "models": {
-      "label": "Templates",
-      "create": "Create a template",
-      "manage": "Manage templates"
-    },
-    "drive": "DSign Drive",
-    "profile": "Account settings"
-  },
-  "sidebar": {
-    "dashboard": "Dashboard",
-    "sign": "Sign",
-    "sendRequest": "Signature request",
-    "models": {
-      "label": "Templates",
-      "create": "Create a template",
-      "manage": "Manage templates"
-    },
-    "settings": {
-      "label": "Settings",
-      "mySignature": "My signature",
-      "users": "Users"
-    },
-    "drive": "DSign Drive",
-    "reports": {
-      "label": "Reports",
-      "needSignature": "Needs signature",
-      "inProgress": "In progress",
-      "complete": "Completed",
-      "draft": "Drafts",
-      "signatureRefused": "Signature refused",
-      "exped": "Expired",
-      "contacts": "Contacts"
     }
   }
 }

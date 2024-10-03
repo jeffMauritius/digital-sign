@@ -22,10 +22,12 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { signIn, signOut, useSession } from "next-auth/react"
 import { redirect } from "next/navigation"
+import { useTranslations } from "next-intl"
 
 export function UserNav() {
   const { data: session } = useSession()
   const urlImage = session?.user?.image
+  const t = useTranslations()
 
   return (
     <DropdownMenu>
@@ -46,7 +48,7 @@ export function UserNav() {
               </Button>
             </DropdownMenuTrigger>
           </TooltipTrigger>
-          <TooltipContent side="bottom">Profile</TooltipContent>
+          <TooltipContent side="bottom">{t(`navbar.profile`)}</TooltipContent>
         </Tooltip>
       </TooltipProvider>
 

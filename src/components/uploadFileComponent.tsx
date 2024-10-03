@@ -1,6 +1,8 @@
+import { useTranslations } from "next-intl"
 import React from "react"
 
 export default function UploadFileComponent() {
+  const t = useTranslations()
   return (
     <div className="flex items-center justify-center w-full">
       <label
@@ -24,11 +26,10 @@ export default function UploadFileComponent() {
             />
           </svg>
           <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-            <span className="font-semibold">Click to upload</span> or drag and
-            drop
+            <span className="font-semibold">{t(`documents.uploadTitle`)}</span>
           </p>
           <p className="text-xs text-gray-500 dark:text-gray-400">
-            Your PDF file
+            {t(`documents.uploadSubtitle`)}
           </p>
         </div>
         <input id="dropzone-file" type="file" className="hidden" />

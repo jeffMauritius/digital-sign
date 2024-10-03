@@ -1,17 +1,5 @@
 {
-  "enums": {
-    "status": {
-      "TO_SIGN": "Para firmar",
-      "WAITING": "En espera",
-      "DRAFT": "Borrador",
-      "COMPLETED": "Completado",
-      "EXPIRED": "Expirado",
-      "SIGNATURE_REFUSED": "Firma rechazada",
-      "IN_PROGRESS": "En progreso",
-      "SIGNED": "Firmado",
-      "UNSIGNED": "No firmado"
-    }
-  },
+  "enums": {},
   "langSwitcher": {
     "fr": "Francés",
     "en": "Inglés",
@@ -19,70 +7,54 @@
     "de": "Alemán",
     "label": "Idioma"
   },
-  "dashboard": {
-    "title": "Tablero",
-    "tabLabels": {
-      "toSign": "Para firmar",
-      "waiting": "En espera",
-      "draft": "Borradores"
-    },
+  "navbar": {
+    "companyName": "WakaSign",
+    "documents": "Documentos",
+    "models": "Modelos",
+    "search": "Buscar",
+    "fullScreen": "Pantalla completa",
+    "switchTheme": "Cambiar tema",
+    "toggleLanguage": "Cambiar idioma",
+    "profile": "Perfil"
+  },
+  "documents": {
+    "title": "Documentos",
+    "subtitle": "Lista de documentos",
+    "uploadTitle": "Haga clic para cargar o arrastrar y soltar un documento",
+    "uploadSubtitle": "Su documento debe estar en formato PDF",
     "table": {
-      "title": {
-        "toSign": "Documentos para firmar",
-        "waiting": "Documentos enviados para firma",
-        "draft": "Tus borradores"
+      "filter": "Filtrar documentos",
+      "toolbar": {
+        "inbox": "Bandeja de entrada",
+        "pending": "Pendiente",
+        "completed": "Completado",
+        "draft": "Borrador",
+        "all": "Todos"
       },
-      "description": {
-        "toSign": "Necesita tu firma",
-        "waiting": "En espera de firma",
-        "draft": "Tus borradores en espera"
+      "header": {
+        "ref": "Referencia",
+        "created": "Creado el",
+        "title": "Título",
+        "recipient": "Destinatario",
+        "status": "Estado",
+        "actions": "Acciones"
+      },
+      "button": {
+        "edit": "Editar",
+        "sign": "Firmar",
+        "download": "Descargar"
+      },
+      "pagination": {
+        "rowsSelected": "línea(s) seleccionada(s)",
+        "rowsPerPage": "Líneas por página",
+        "page": "Página",
+        "of": "de"
+      },
+      "actionsToggle": {
+        "sign": "Firmar",
+        "download": "Descargar",
+        "delete": "Eliminar"
       }
-    },
-    "card": {}
-  },
-  "sign": {
-    "title": "Firmar"
-  },
-  "sendRequest": {
-    "title": "Enviar una solicitud de firma"
-  },
-  "breadcrumb": {
-    "home": "Inicio",
-    "dashboard": "Tablero",
-    "sign": "Firmar",
-    "sendRequest": "Solicitud de firma",
-    "models": {
-      "label": "Modelos",
-      "create": "Crear un modelo",
-      "manage": "Gestionar modelos"
-    },
-    "drive": "Unidad DSign",
-    "profile": "Configuración de la cuenta"
-  },
-  "sidebar": {
-    "dashboard": "Tablero",
-    "sign": "Firmar",
-    "sendRequest": "Solicitud de firma",
-    "models": {
-      "label": "Modelos",
-      "create": "Crear un modelo",
-      "manage": "Gestionar modelos"
-    },
-    "settings": {
-      "label": "Configuraciones",
-      "mySignature": "Mi firma",
-      "users": "Usuarios"
-    },
-    "drive": "Unidad DSign",
-    "reports": {
-      "label": "Informes",
-      "needSignature": "Necesita firma",
-      "inProgress": "En progreso",
-      "complete": "Completados",
-      "draft": "Borradores",
-      "signatureRefused": "Firma rechazada",
-      "exped": "Expirado",
-      "contacts": "Contactos"
     }
   }
 }

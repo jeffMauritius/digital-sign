@@ -10,6 +10,7 @@ import {
   TooltipTrigger,
 } from "../ui/tooltip"
 import { z } from "zod"
+import { useTranslations } from "next-intl"
 
 // Define a schema for the props using zod
 const ToggleFullScreenPropsSchema = z.object({
@@ -20,7 +21,7 @@ type ToggleFullScreenProps = z.infer<typeof ToggleFullScreenPropsSchema>
 
 export default function ToggleFullScreen(props: ToggleFullScreenProps) {
   const parsedProps = ToggleFullScreenPropsSchema.parse(props)
-
+  const t = useTranslations()
   const [toggleIcon, setToggleIcon] = useState(
     parsedProps.initialToggleIcon ?? true,
   )
@@ -52,7 +53,7 @@ export default function ToggleFullScreen(props: ToggleFullScreenProps) {
             )}
           </Button>
         </TooltipTrigger>
-        <TooltipContent side="bottom">Full screen</TooltipContent>
+        <TooltipContent side="bottom">{t(`navbar.fullScreen`)}</TooltipContent>
       </Tooltip>
     </TooltipProvider>
   )

@@ -17,6 +17,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip"
+import { useTranslations } from "next-intl"
 
 type Props = {
   defaultValue: string
@@ -26,6 +27,7 @@ type Props = {
 
 export default function LangSelect({ defaultValue, items, label }: Props) {
   const [isPending, startTransition] = useTransition()
+  const t = useTranslations()
 
   function onChange(value: string) {
     const locale = value as Locale
@@ -46,11 +48,13 @@ export default function LangSelect({ defaultValue, items, label }: Props) {
                 size="icon"
               >
                 <Languages className="h-5 w-5" />
-                <span className="sr-only">Toggle language</span>
+                <span className="sr-only">{t(`navbar.toggleLanguage`)}</span>
               </Button>
             </DropdownMenuTrigger>
           </TooltipTrigger>
-          <TooltipContent side="bottom">Toggle language</TooltipContent>
+          <TooltipContent side="bottom">
+            {t(`navbar.toggleLanguage`)}
+          </TooltipContent>
         </Tooltip>
       </TooltipProvider>
 
