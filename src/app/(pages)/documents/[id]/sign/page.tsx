@@ -14,8 +14,6 @@ export default function DocumentPageEdit({
   const { data: session, status } = useSession()
   const t = useTranslations()
 
-  console.log("Document ID", params.id)
-
   if (status === "loading") {
     return <div>Loading...</div>
   }

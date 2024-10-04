@@ -3,11 +3,6 @@ import { useDropzone } from "react-dropzone"
 import { useTranslations } from "next-intl"
 import { useRouter } from "next/navigation"
 import withContext from "@/services/context/withContext"
-import Document from "@/interfaces/document.interface"
-
-interface ContextType {
-  document: Document
-}
 
 interface UploadFileComponentProps {
   context: {
@@ -18,20 +13,20 @@ interface UploadFileComponentProps {
 function UploadFileComponent({
   context: { dispatch },
 }: UploadFileComponentProps) {
-  console.log("Upload", dispatch)
   const t = useTranslations()
   const router = useRouter()
+
   const onDrop = useCallback((acceptedFiles: any) => {
     if (acceptedFiles.length > 0) {
       const file = acceptedFiles[0]
       const reader = new FileReader()
       reader.onload = e => {
         const data = e.target?.result
+        console.log("e.target", e.target)
         dispatch({
           type: "SET_NEW_DOCUMENT_PDF",
           payload: data,
         })
-        console.log("data", file.name, data)
       }
       dispatch({
         type: "SET_DOCUMENT_NAME",

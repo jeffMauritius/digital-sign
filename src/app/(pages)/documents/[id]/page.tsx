@@ -10,8 +10,6 @@ export default function DocumentPage({ params }: { params: { id: string } }) {
   const { data: session, status } = useSession()
   const t = useTranslations()
 
-  console.log("Document ID", params.id)
-
   if (status === "loading") {
     return <div>Loading...</div>
   }
