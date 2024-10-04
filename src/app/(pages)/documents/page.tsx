@@ -18,7 +18,7 @@ export default function DocumentsPage() {
   }
 
   return (
-    <ContentLayout title={t("document.title")}>
+    <ContentLayout title={t("documents.title")}>
       {!session && (
         <div className="h-60 grid gap-4 content-center" aria-live="polite">
           <div className="border p-3 rounded">

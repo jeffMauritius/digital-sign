@@ -1,9 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons"
+import { ArrowRightIcon } from "@radix-ui/react-icons"
 
 import { Button } from "@/components/ui/button"
-import { ModeToggle } from "@/components/navbar/mode-toggle"
 
 export default function HomePage() {
   return (
@@ -19,7 +18,7 @@ export default function HomePage() {
               className="pb-5"
             />
             <h1 className="text-center text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]">
-              Digital signature
+              DSign
             </h1>
             <span className="max-w-[750px] text-center text-lg font-light text-foreground">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
@@ -45,24 +44,6 @@ export default function HomePage() {
               </Button>
             </div>
           </section>
-          <div className="w-full flex justify-center relative">
-            <Image
-              src="/digital.png"
-              width={400}
-              height={400}
-              alt="demo"
-              priority
-              className="rounded-xl shadow-sm dark:hidden"
-            />
-            <Image
-              src="/digital.png"
-              width={400}
-              height={400}
-              alt="demo-dark"
-              priority
-              className="rounded-xl shadow-sm hidden dark:block dark:shadow-gray-500/5"
-            />
-          </div>
         </div>
       </main>
     </div>

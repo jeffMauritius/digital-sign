@@ -17,7 +17,7 @@ export default function DownloadPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <ContentLayout title={t("document.title")}>
+    <ContentLayout title={t("documents.title")}>
       {session && (
         <div className="">
           <div className="grid grid-cols gap-4 pb-5">

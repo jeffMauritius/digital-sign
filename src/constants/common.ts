@@ -1,1 +1,1 @@
-export const APP_NAME = "WakaSign"
+export const APP_NAME = "DSign"
