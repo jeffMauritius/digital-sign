@@ -16,31 +16,34 @@ function UploadFileComponent({
   const t = useTranslations()
   const router = useRouter()
 
-  const onDrop = useCallback((acceptedFiles: any) => {
-    if (acceptedFiles.length > 0) {
-      const file = acceptedFiles[0]
-      const reader = new FileReader()
-      reader.onload = e => {
-        const data = e.target?.result
-        console.log("e.target", e.target)
+  const onDrop = useCallback(
+    (acceptedFiles: any) => {
+      if (acceptedFiles.length > 0) {
+        const file = acceptedFiles[0]
+        const reader = new FileReader()
+        reader.onload = e => {
+          const data = e.target?.result
+          console.log("e.target", e.target)
+          dispatch({
+            type: "SET_NEW_DOCUMENT_PDF",
+            payload: data,
+          })
+        }
         dispatch({
-          type: "SET_NEW_DOCUMENT_PDF",
-          payload: data,
+          type: "SET_DOCUMENT_NAME",
+          payload: file.name,
         })
-      }
-      dispatch({
-        type: "SET_DOCUMENT_NAME",
-        payload: file.name,
-      })
-      dispatch({
-        type: "SET_NEW_DOCUMENT",
-        payload: file,
-      })
+        dispatch({
+          type: "SET_NEW_DOCUMENT",
+          payload: file,
+        })
 
-      router.push("/documents/1/edit")
-      reader.readAsDataURL(file)
-    }
-  }, [])
+        router.push("/documents/1/edit")
+        reader.readAsDataURL(file)
+      }
+    },
+    [dispatch, router],
+  )
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
   return (
