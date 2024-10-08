@@ -1,8 +1,9 @@
-import React, { useCallback } from "react"
+import React, { use, useCallback, useEffect, useState } from "react"
 import { useDropzone } from "react-dropzone"
 import { useTranslations } from "next-intl"
 import { useRouter } from "next/navigation"
 import withContext from "@/services/context/withContext"
+import { createDocument } from "@/actions/document/create"
 
 interface UploadFileComponentProps {
   context: {
@@ -15,6 +16,13 @@ function UploadFileComponent({
 }: UploadFileComponentProps) {
   const t = useTranslations()
   const router = useRouter()
+  const [fileName, setFileName] = useState()
+
+  useEffect(() => {
+    if (fileName) {
+      createDocument({ name: fileName, status: "draft" })
+    }
+  }, [fileName])
 
   const onDrop = useCallback(
     (acceptedFiles: any) => {
@@ -23,33 +31,39 @@ function UploadFileComponent({
         const reader = new FileReader()
         reader.onload = e => {
           const data = e.target?.result
-          console.log("e.target", e.target)
+          setFileName(file.name)
+
+          // create a new document
+          router.push("/documents/1/edit")
+
           dispatch({
             type: "SET_NEW_DOCUMENT_PDF",
             payload: data,
           })
+          dispatch({
+            type: "SET_DOCUMENT_NAME",
+            payload: fileName,
+          })
+          dispatch({
+            type: "SET_NEW_DOCUMENT",
+            payload: file,
+          })
         }
-        dispatch({
-          type: "SET_DOCUMENT_NAME",
-          payload: file.name,
-        })
-        dispatch({
-          type: "SET_NEW_DOCUMENT",
-          payload: file,
-        })
 
-        router.push("/documents/1/edit")
         reader.readAsDataURL(file)
       }
     },
-    [dispatch, router],
+    [dispatch, router, fileName],
   )
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
+
+  const { getRootProps, getInputProps } = useDropzone({ onDrop })
 
   return (
     <div
       className="flex items-center justify-center w-full"
-      {...getRootProps()}
+      {...getRootProps({
+        onClick: event => event.stopPropagation(),
+      })}
     >
       <label
         htmlFor="dropzone-file"

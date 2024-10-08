@@ -12,7 +12,6 @@ import {
 import { z } from "zod"
 import { useTranslations } from "next-intl"
 
-// Define a schema for the props using zod
 const ToggleFullScreenPropsSchema = z.object({
   initialToggleIcon: z.boolean().optional(),
 })
@@ -27,7 +26,7 @@ export default function ToggleFullScreen(props: ToggleFullScreenProps) {
   )
 
   const toggleFullScreen = () => {
-    if (!document.fullscreenElement) {
+    if (!document?.fullscreenElement) {
       setToggleIcon(false)
       document.documentElement.requestFullscreen()
     } else if (document.exitFullscreen) {
