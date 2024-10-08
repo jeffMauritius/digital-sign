@@ -15,10 +15,27 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { Separator } from "@/components/ui/separator"
 
 const FormSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+  title: z.string().min(2, {
+    message: "Title must be at least 2 characters.",
+  }),
+  DocumentAccess: z.string().nonempty({
+    message: "Document access is required.",
+  }),
+  DateFormat: z.string().nonempty({
+    message: "Date format is required.",
+  }),
+  TimeZone: z.string().nonempty({
+    message: "Time zone is required.",
   }),
 })
 
@@ -26,7 +43,10 @@ export function StepOne() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      username: "",
+      title: "",
+      DocumentAccess: "",
+      DateFormat: "",
+      TimeZone: "",
     },
   })
 
@@ -43,27 +63,112 @@ export function StepOne() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+      <div className="pb-5">
+        <h1 className="text-2xl">Document settings</h1>
+        <p>Configure general settings for the document.</p>
+      </div>
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="w-full space-y-6 pb-5"
+      >
         <FormField
-          control={form.control}
-          name="username"
+          control={form.control as any}
+          name="title"
           render={({ field }) => (
-            <div>
-              <h1>Step One</h1>
-              <p>Configure general settings for the document.</p>
-              <FormItem>
-                <FormLabel>Username</FormLabel>
-                <FormControl>
-                  <Input placeholder="shadcn" {...field} />
-                </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            </div>
+            <FormItem>
+              <FormLabel>Title</FormLabel>
+              <FormControl>
+                <Input placeholder="Document title" {...field} />
+              </FormControl>
+              <FormDescription>
+                This is your public display document name.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
           )}
         />
+        <FormField
+          control={form.control}
+          name="DocumentAccess"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Document access</FormLabel>
+              <FormControl>
+                <Select onValueChange={field.onChange} value={field.value}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select access level" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="noRestrictions">
+                      No restrictions
+                    </SelectItem>
+                    <SelectItem value="requireAccount">
+                      Require account
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormDescription>
+                The authentication required for recipients to view the document.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="flex justify-center space-x-3 ">
+          <FormField
+            control={form.control}
+            name="DateFormat"
+            render={({ field }) => (
+              <FormItem className="w-1/2">
+                <FormLabel>Date format</FormLabel>
+                <FormControl>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select date format" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="noRestrictions">
+                        No restrictions
+                      </SelectItem>
+                      <SelectItem value="requireAccount">
+                        Require account
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </FormControl>
+                <FormDescription>Select the date format.</FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="TimeZone"
+            render={({ field }) => (
+              <FormItem className="w-1/2">
+                <FormLabel>Time zone</FormLabel>
+                <FormControl>
+                  <Select onValueChange={field.onChange} value={field.value}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select time zone" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="noRestrictions">
+                        No restrictions
+                      </SelectItem>
+                      <SelectItem value="requireAccount">
+                        Require account
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </FormControl>
+                <FormDescription>Select the time zone.</FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
       </form>
     </Form>
   )
