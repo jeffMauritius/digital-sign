@@ -22,6 +22,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { DateFormat } from "@/enums/date-format.enums"
+import { TimeZone } from "@/enums/time-zone.enums"
 import { Separator } from "@/components/ui/separator"
 
 const FormSchema = z.object({
@@ -64,8 +66,8 @@ export function StepOne() {
   return (
     <Form {...form}>
       <div className="pb-5">
-        <h1 className="text-2xl">Document settings</h1>
-        <p>Configure general settings for the document.</p>
+        <h1 className="text-2xl font-bold">Paramétres du document</h1>
+        <p>Configurer les paramétres pour ce document.</p>
       </div>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
@@ -76,13 +78,11 @@ export function StepOne() {
           name="title"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Title</FormLabel>
+              <FormLabel>Titre</FormLabel>
               <FormControl>
                 <Input placeholder="Document title" {...field} />
               </FormControl>
-              <FormDescription>
-                This is your public display document name.
-              </FormDescription>
+
               <FormMessage />
             </FormItem>
           )}
@@ -92,25 +92,22 @@ export function StepOne() {
           name="DocumentAccess"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Document access</FormLabel>
+              <FormLabel>Droits d'accés</FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select access level" />
+                    <SelectValue placeholder="Selectionner droits d'accès" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="noRestrictions">
-                      No restrictions
+                      Pas de restrictions
                     </SelectItem>
                     <SelectItem value="requireAccount">
-                      Require account
+                      Un compte est requis
                     </SelectItem>
                   </SelectContent>
                 </Select>
               </FormControl>
-              <FormDescription>
-                The authentication required for recipients to view the document.
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )}
@@ -121,23 +118,26 @@ export function StepOne() {
             name="DateFormat"
             render={({ field }) => (
               <FormItem className="w-1/2">
-                <FormLabel>Date format</FormLabel>
+                <FormLabel>Format de la date</FormLabel>
                 <FormControl>
                   <Select onValueChange={field.onChange} value={field.value}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select date format" />
+                      <SelectValue placeholder="Selectionner le format" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="noRestrictions">
-                        No restrictions
-                      </SelectItem>
-                      <SelectItem value="requireAccount">
-                        Require account
-                      </SelectItem>
+                      {Object.values(DateFormat).map(
+                        format => (
+                          console.log("format", format),
+                          (
+                            <SelectItem key={format} value={format}>
+                              {format}
+                            </SelectItem>
+                          )
+                        ),
+                      )}
                     </SelectContent>
                   </Select>
                 </FormControl>
-                <FormDescription>Select the date format.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
@@ -147,29 +147,28 @@ export function StepOne() {
             name="TimeZone"
             render={({ field }) => (
               <FormItem className="w-1/2">
-                <FormLabel>Time zone</FormLabel>
+                <FormLabel>Fuseau horaire</FormLabel>
                 <FormControl>
                   <Select onValueChange={field.onChange} value={field.value}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select time zone" />
+                      <SelectValue placeholder="Selectionner le fuseau horaire" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="noRestrictions">
-                        No restrictions
-                      </SelectItem>
-                      <SelectItem value="requireAccount">
-                        Require account
-                      </SelectItem>
+                      {Object.values(TimeZone).map(zone => (
+                        <SelectItem key={zone} value={zone}>
+                          {zone}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </FormControl>
-                <FormDescription>Select the time zone.</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
           />
         </div>
       </form>
+      <p className="text-slate-500 text-xs">Etape 1 sur 4</p>
     </Form>
   )
 }

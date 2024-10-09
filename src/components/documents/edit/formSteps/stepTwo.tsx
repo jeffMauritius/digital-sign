@@ -5,20 +5,24 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 
 import { toast } from "@/hooks/use-toast"
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
+import { Form } from "@/components/ui/form"
+
+import { Button } from "@/components/ui/button"
+import SignerItem from "./signerItem"
+import { useState } from "react"
 
 const FormSchema = z.object({
   username: z.string().min(2, {
     message: "Username must be at least 2 characters.",
+  }),
+  email: z.string().email({
+    message: "Invalid email address.",
+  }),
+  name: z.string().min(1, {
+    message: "Name is required.",
+  }),
+  role: z.enum(["viewer", "editor", "signer", "admin"], {
+    message: "Invalid role.",
   }),
 })
 
@@ -41,33 +45,35 @@ export function StepTwo() {
     })
   }
 
+  const [signers, setSigners] = useState([<SignerItem key={0} />])
+
+  const addSigner = () => {
+    setSigners([...signers, <SignerItem key={signers.length} />])
+  }
+
+  console.log("signers", signers)
+
   return (
     <div>
-      <h1>Step Two</h1>
-      <p>Configure general settings for the document.</p>
+      <div className="pb-5">
+        <h1 className="text-2xl font-bold">Ajouter des signataires</h1>
+        <p>Ajouter les personnes qui signeront le document.</p>
+      </div>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-2/3 space-y-6"
+          className="flex flex-col flex-wrap w-full pt-5"
         >
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Username</FormLabel>
-                <FormControl>
-                  <Input placeholder="shadcn" {...field} />
-                </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          {signers}
+          <div className="flex justify-end">
+            <Button type="button" variant="outline" onClick={addSigner}>
+              Ajouter un signataire
+            </Button>
+          </div>
         </form>
       </Form>
+
+      <p className="text-slate-500 text-xs">Etape 2 sur 4</p>
     </div>
   )
 }
