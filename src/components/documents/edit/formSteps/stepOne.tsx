@@ -92,7 +92,7 @@ export function StepOne() {
           name="DocumentAccess"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Droits d'accés</FormLabel>
+              <FormLabel>{`Droits d'accés`}</FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} value={field.value}>
                   <SelectTrigger>
