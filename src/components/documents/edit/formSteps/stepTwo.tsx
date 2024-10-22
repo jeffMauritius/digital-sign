@@ -51,8 +51,6 @@ export function StepTwo() {
     setSigners([...signers, <SignerItem key={signers.length} />])
   }
 
-  console.log("signers", signers)
-
   return (
     <div>
       <div className="pb-5">

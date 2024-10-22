@@ -125,16 +125,11 @@ export function StepOne() {
                       <SelectValue placeholder="Selectionner le format" />
                     </SelectTrigger>
                     <SelectContent>
-                      {Object.values(DateFormat).map(
-                        format => (
-                          console.log("format", format),
-                          (
-                            <SelectItem key={format} value={format}>
-                              {format}
-                            </SelectItem>
-                          )
-                        ),
-                      )}
+                      {Object.values(DateFormat).map(format => (
+                        <SelectItem key={format} value={format}>
+                          {format}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </FormControl>
